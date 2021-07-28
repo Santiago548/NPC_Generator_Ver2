@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getNpcs } from './actions/npcs'
+import { getNpcs, addNpc } from './actions/npcs'
 import "./App.css";
+import npcRandom from "./containers/npcRandom";
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
         <ul>
           {this.props.loading ? <h4>...Loading NPC's</h4> : npcs }
         </ul>
+        <npcRandom />
       </div>
     );
   }
@@ -30,4 +32,4 @@ const mapStateToProps = (state) => {
     loading: state.npcReducer.loading,
   };
 };
-export default connect(mapStateToProps, { getNpcs })(App);
+export default connect(mapStateToProps, { getNpcs, addNpc })(App);

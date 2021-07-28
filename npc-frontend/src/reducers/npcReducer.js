@@ -14,6 +14,18 @@ export default (state = { npcs: [], loading: false }, action) => {
         loading: false,
       };
 
+    case "ADDING_NPC":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "NPC_ADDED":
+      return {
+        ...state,
+        npc: action.payload,
+        loading: false,
+      };
+
     default:
       return state;
   }

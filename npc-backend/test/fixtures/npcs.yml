@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  title: MyString
+  race: MyString
+  sex: MyString
+  alignment: MyString
+  melee: MyString
+  ranged: MyString
+  health: 1
+  armor: MyString
+  str: 1
+  dex: 1
+  con: 1
+  wis: 1
+  cha: 1
+  npcClass: MyString
+  trait: MyString
+
+two:
+  firstName: MyString
+  lastName: MyString
+  title: MyString
+  race: MyString
+  sex: MyString
+  alignment: MyString
+  melee: MyString
+  ranged: MyString
+  health: 1
+  armor: MyString
+  str: 1
+  dex: 1
+  con: 1
+  wis: 1
+  cha: 1
+  npcClass: MyString
+  trait: MyString

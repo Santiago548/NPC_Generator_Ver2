@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getNpcs, addNpc } from './actions/npcs'
+import { getNpcs, addNpc, deleteNpc } from './actions/npcs'
 import "./App.css";
 import NpcRandom from "./containers/npcRandom";
 
@@ -10,9 +10,14 @@ class App extends Component {
     this.props.getNpcs()
   }
 
+  handleclick = event => {
+    this.props.deleteNpc(event.target.id)
+  }
+
 
   render() {
-    const npcs = this.props.npcs.map((npc, i) => <li key={i}>{npc.firstName}<button id={npc.id}>X</button></li>)
+    const npcs = this.props.npcs.map((npc) => <li key={npc.id}> {npc.firstName}<button onClick={() => deleteNpc(npc.id)} id={npc.id}>X</button></li>)
+    
     return (
       <div className="App">
         <h1>NPC's</h1>

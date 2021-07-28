@@ -10,17 +10,17 @@ export const getNpcs = () => {
     }
 }
 
-export const addNpc = () => {
+export const addNpc = (npc) => {
     return (dispatch) => {
         dispatch({ type: "ADDING_NPC"})
-        let conficObj = {
+        let configObj = {
             method: 'POST',
             header: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(npc)
         }
-        fetch('/npcs', conficObj)
+        fetch('/npcs', configObj)
         .then(res => res.json())
         .then(npc => dispatch({
             type: 'NPC_ADDED',

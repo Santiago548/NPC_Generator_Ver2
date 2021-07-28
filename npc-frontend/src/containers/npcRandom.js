@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { addNpc } from '../actions/characters'
+import { addNpc } from '../actions/npcs'
 import { connect } from 'react-redux'
 
-class RandomNpc extends Component {
+class NpcRandom extends Component {
 
     constructor(props) {
         super(props)
@@ -81,7 +81,7 @@ class RandomNpc extends Component {
         }
         
 
-        const firstname = randomFirstnamefunction()
+        const firstname = randomFirstNameFunction()
         const lastname = randomLastname
         const title = randomTitle
         const race = randomRace
@@ -134,4 +134,4 @@ class RandomNpc extends Component {
     }
 }
 
-export default connect(null, { addNpc })(RandomNpc)
+export default connect(null, { addNpc })(NpcRandom)

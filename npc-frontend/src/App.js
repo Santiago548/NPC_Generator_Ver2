@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getNpcs, addNpc } from './actions/npcs'
 import "./App.css";
-import npcRandom from "./containers/npcRandom";
+import NpcRandom from "./containers/npcRandom";
 
 class App extends Component {
 
@@ -20,7 +20,7 @@ class App extends Component {
         <ul>
           {this.props.loading ? <h4>...Loading NPC's</h4> : npcs }
         </ul>
-        <npcRandom />
+        <NpcRandom />
       </div>
     );
   }

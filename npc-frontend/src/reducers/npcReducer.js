@@ -1,0 +1,1 @@
+export default (state = { npcs: [], loading:false })

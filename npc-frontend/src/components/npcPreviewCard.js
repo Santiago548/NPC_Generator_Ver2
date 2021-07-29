@@ -1,19 +1,18 @@
 import React from 'react';
 
-const NpcCard = ({ npc, deleteNpc }) =>
+const NpcPreviewCard = ({ npc, deleteNpc }) =>
 
   <div>
       <button
         type="character-button"
-        onClick={() => deleteCharacter(character.id)}
+        onClick={() => deleteNpc(npc.id)}
       >
         <span aria-hidden="true">&times;</span>
+      </button>
         <div>
-            <h3>{npc.name}</h3>
+            <h3>{npc.firstName} {npc.lastName}</h3>
             <br />
         </div>
-      </button>
   </div>
 
-
-export default NpcCard;
+export default NpcPreviewCard;

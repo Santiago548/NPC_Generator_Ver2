@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getNpcs, addNpc, deleteNpc } from './actions/npcs'
 import "./App.css";
-import NpcRandom from "./containers/npcRandom";
-
+import { getNpcs, addNpc, deleteNpc } from './actions/npcs'
+import NpcContainer from "./containers/npcContainer";
 class App extends Component {
 
   componentDidMount() {
@@ -14,18 +13,14 @@ class App extends Component {
     this.props.deleteNpc(event.target.id)
   }
 
-
   render() {
-    const npcs = this.props.npcs.map((npc) => <li key={npc.id}> {npc.firstName}<button onClick={() => deleteNpc(npc.id)} id={npc.id}>X</button></li>)
     
     return (
       <div className="App">
         <h1>NPC's</h1>
         <hr />
-        <ul>
-          {this.props.loading ? <h4>...Loading NPC's</h4> : npcs }
-        </ul>
-        <NpcRandom />
+        <NpcContainer />
+
       </div>
     );
   }
@@ -37,4 +32,4 @@ const mapStateToProps = (state) => {
     loading: state.npcReducer.loading,
   };
 };
-export default connect(mapStateToProps, { getNpcs, addNpc })(App);
+export default connect(mapStateToProps, { getNpcs, addNpc,deleteNpc })(App);

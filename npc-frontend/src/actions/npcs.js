@@ -23,7 +23,7 @@ export const addNpc = (npc) => {
         fetch('/npcs', configObj)
         .then(res => res.json())
         .then(npc => dispatch({
-            type: "CHARACTER_ADDED",
+            type: "NPC_ADDED",
             payload: npc
         }))
     }

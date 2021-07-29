@@ -124,7 +124,7 @@ class NpcRandom extends Component {
     render() {
         return (
             <div>
-                <fieldset className='random-form'>
+                <fieldset >
                     <form onSubmit={this.handleClick} >
                         <button type="submit">Random <b>NPC</b></button>
                     </form>

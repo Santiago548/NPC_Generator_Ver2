@@ -20,20 +20,20 @@ export default (state = { npcs: [], loading: false }, action) => {
     case "NPC_ADDED":
       return {
         ...state,
-        npc: action.payload,
+        npcs: [...state.npcs, action.payload],
         loading: false,
       };
+
     case "DELETING_NPC":
       return {
         ...state,
         loading: true,
       };
+      
     case "NPC_DELETED":
       return {
         ...state,
-        npcs: [
-          ...state.npcs.filter((npc) => npc.id !== parseInt(action.payload)),
-        ],
+        npcs: [...state.npcs.filter((npc) => npc.id !== parseInt(action.payload))],
         loading: false,
       };
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
-import { getNpcs, addNpc, deleteNpc } from './actions/npcs'
+import { getNpcs, deleteNpc } from './actions/npcs'
 import NpcContainer from "./containers/npcContainer";
 class App extends Component {
 
@@ -32,4 +32,4 @@ const mapStateToProps = (state) => {
     loading: state.npcReducer.loading,
   };
 };
-export default connect(mapStateToProps, { getNpcs, addNpc,deleteNpc })(App);
+export default connect(mapStateToProps, { getNpcs, deleteNpc })(App);

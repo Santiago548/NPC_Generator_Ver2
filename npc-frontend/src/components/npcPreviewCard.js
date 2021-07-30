@@ -13,6 +13,9 @@ const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
           The {npc.title} {npc.npcClass}
         </div>
         <br />
+        HEALTH: <span>{npc.health + (npc.con * 6)} HP</span><br />
+        ARMOR: <span>{npc.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' + (parseInt(npc.armor.split(' ').slice(1)) + npc.dex)}</span><br />
+
       </div>
       <button onClick={() => getNpcFullCard(npc.id)}>
         <span aria-hidden="true">Full Stat Card</span>

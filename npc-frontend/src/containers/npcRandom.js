@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { addNpc } from '../actions/npcs'
 import { connect } from 'react-redux'
 
+
 class NpcRandom extends Component {
 
     constructor(props) {

@@ -1,6 +1,7 @@
 import React from "react";
 
 const NpcFullCard = ({ npc, deleteNpc }) => (
+  
   <div>
     <fieldset>
       <button type="character-button" onClick={() => deleteNpc(npc.id)}>

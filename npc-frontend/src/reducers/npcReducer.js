@@ -20,7 +20,7 @@ export default (state = { npcs: [], loading: false }, action) => {
     case "NPC_LOADED":
       return {
         ...state,
-        npc: action.payload.filter((npc) => npc.id === action.payload.id),
+        npcs: [...state.npcs.filter((npc) => npc.id === parseInt(action.payload.id))],
         loading: false,
       };
 

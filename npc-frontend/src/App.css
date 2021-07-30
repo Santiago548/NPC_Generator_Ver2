@@ -22,3 +22,16 @@
   color: #61dafb;
 }
 
+.npc-container {
+  width: auto;
+}
+
+.npc-list {
+float: left;
+width: 50%;
+}
+
+.npc-full-card {
+  float: right;
+  width: 50%;
+}

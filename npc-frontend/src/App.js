@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
-import { getNpcs, deleteNpc } from "./actions/npcs";
+import { getNpcs, deleteNpc, getNpcFullCard } from "./actions/npcs";
 import NpcContainer from "./containers/npcContainer";
 import Navigation from "./components/Navigation";
 import { About } from "./components/about"
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -15,6 +16,10 @@ class App extends Component {
   handleclick = (event) => {
     this.props.deleteNpc(event.target.id);
   };
+
+  handleclick = (event) => {
+    this.props.getNpcFullCard(event.target.id);
+  }
 
   render() {
     return (
@@ -40,4 +45,4 @@ const mapStateToProps = (state) => {
     loading: state.npcReducer.loading,
   };
 };
-export default connect(mapStateToProps, { getNpcs, deleteNpc })(App);
+export default connect(mapStateToProps, { getNpcs, deleteNpc, getNpcFullCard })(App);

@@ -1,6 +1,6 @@
 import React from "react";
 
-const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
+const NpcFullCard = ({ npc, deleteNpc, getNpcFullCard }) => (
   <div>
     <fieldset>
       <button onClick={() => deleteNpc(npc.id)}>
@@ -23,13 +23,18 @@ const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
             " " +
             (parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
         </span>
+        <ul>
+            str:<li>{npc.str / (10 + (npc.str * 2))}</li>
+            dex:<li>{npc.dex / (10 + (npc.dex * 2))}</li>
+            com:<li>{npc.con / (10 + (npc.con * 2))}</li>
+            wis:<li>{npc.wis / (10 + (npc.wis * 2))}</li>
+            cha:<li>{npc.cha / (10 + (npc.cha * 2))}</li>
+        </ul>
         <br />
       </div>
-      <div className="navlink"></div>
       <br />
-      <button onClick={() => getNpcFullCard(npc.id)}>Get Full Card</button>
     </fieldset>
   </div>
 );
 
-export default NpcPreviewCard;
+export default NpcFullCard;

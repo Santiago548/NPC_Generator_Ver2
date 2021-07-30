@@ -1,32 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import NpcPreviewCard from "../components/npcPreviewCard";
-import { deleteNpc, getNpcFullCard } from "../actions/npcs";
+import { deleteNpc } from "../actions/npcs";
 
 class NpcHome extends Component {
-
-  handleclick = event => {
-    this.props.getNpcFullCard(event.target.id)
-  }
-
-
+ 
   render() {
     const { npcs, deleteNpc, getNpcFullCard } = this.props;
-    const npc = npcs.filter((npc) => npc.id === this.props.id)
-    
+    const npc = npcs.filter((npc) => npc.id === this.props.id);
+
     return (
-      <div>
-        <hr className="hr-title" />
-        <h2 className="app-title">| Npcs |</h2>
-        <hr className="hr-title" />
-        <div>
-          <div>
-            {npcs.map((npc) => (
-              <NpcPreviewCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
-            ))}
-          </div>
+      <div className="npc-container">
+        <div className="npc-list">
+          <h2>| Npcs |</h2>
+          <hr />
+          {npcs.map((npc) => (
+            <NpcPreviewCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
+          ))}
+        </div>
+        <div className="npc-full-card">
           <h2 className="app-title">| Npc |</h2>
-          </div>
+        </div>
       </div>
     );
   }
@@ -35,8 +29,8 @@ class NpcHome extends Component {
 const mapStateToProps = (state) => {
   return {
     npcs: state.npcReducer.npcs,
-    loading: state.npcReducer.loading
+    loading: state.npcReducer.loading,
   };
 };
 
-export default connect(mapStateToProps, { deleteNpc, getNpcFullCard })(NpcHome);
+export default connect(mapStateToProps, { deleteNpc })(NpcHome);

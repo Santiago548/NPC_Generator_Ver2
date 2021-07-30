@@ -9,7 +9,6 @@ class NpcContainer extends Component {
     return (
     <div>
         <NpcRandom />
-        <hr />
         {this.props.loading ? <h5>Loading Npcs...</h5> : <NpcHome />}
     </div>
     )

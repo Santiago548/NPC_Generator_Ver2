@@ -12,6 +12,18 @@ export default (state = { npcs: [], loading: false }, action) => {
         loading: false,
       };
 
+    case "LOADING_NPC":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "NPC_LOADED":
+      return {
+        ...state,
+        npc: action.payload.filter((npc) => npc.id === action.payload.id),
+        loading: false,
+      };
+
     case "ADDING_NPC":
       return {
         ...state,
@@ -29,11 +41,13 @@ export default (state = { npcs: [], loading: false }, action) => {
         ...state,
         loading: true,
       };
-      
+
     case "NPC_DELETED":
       return {
         ...state,
-        npcs: [...state.npcs.filter((npc) => npc.id !== parseInt(action.payload))],
+        npcs: [
+          ...state.npcs.filter((npc) => npc.id !== parseInt(action.payload)),
+        ],
         loading: false,
       };
 

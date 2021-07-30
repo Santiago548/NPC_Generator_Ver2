@@ -1,9 +1,9 @@
 import React from "react";
 
-const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
+const NpcFullCard = ({ npc, deleteNpc }) => (
   <div>
     <fieldset>
-      <button onClick={() => deleteNpc(npc.id)}>
+      <button type="character-button" onClick={() => deleteNpc(npc.id)}>
         <span aria-hidden="true">&times;</span>
       </button>
       <div>
@@ -12,13 +12,17 @@ const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
           <br />
           The {npc.title} {npc.npcClass}
         </div>
+        <div>
+            {npc.str}
+            {npc.dex}
+            {npc.con}
+            {npc.wis}
+            {npc.cha}
+        </div>
         <br />
       </div>
-      <button onClick={() => getNpcFullCard(npc.id)}>
-        <span aria-hidden="true">Full Stat Card</span>
-      </button>
     </fieldset>
   </div>
 );
 
-export default NpcPreviewCard;
+export default NpcFullCard;

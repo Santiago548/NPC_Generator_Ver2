@@ -45,3 +45,15 @@ export const deleteNpc = (id) => {
         }))
     }    
 }
+
+export const getNpcFullCard = (id) => {
+    return(dispatch) => {
+        dispatch({ type: "LOADING_NPC"})
+        fetch(`/npc/${id}`)
+        .then(res => res.json())
+        .then(npcs => dispatch({
+            type:  "NPC_LOADED",
+            payload: npcs
+        }))
+    }
+}

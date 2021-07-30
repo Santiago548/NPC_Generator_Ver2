@@ -10,7 +10,7 @@ const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
         <div>
           {npc.firstName} {npc.lastName}
           <br />
-          The {npc.title} {npc.npcClass}
+          The {npc.npcClass} {npc.title} 
         </div>
         <br />
         HEALTH: <span>{npc.health + npc.con * 6} HP</span>
@@ -25,9 +25,8 @@ const NpcPreviewCard = ({ npc, deleteNpc, getNpcFullCard }) => (
         </span>
         <br />
       </div>
-      <div className="navlink"></div>
+      <button onClick={() => getNpcFullCard(npc.id)}>Full Card</button>
       <br />
-      <button onClick={() => getNpcFullCard(npc.id)}>Get Full Card</button>
     </fieldset>
   </div>
 );

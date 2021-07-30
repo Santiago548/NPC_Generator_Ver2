@@ -21,6 +21,10 @@ class App extends Component {
     this.props.getNpcFullCard(event.target.id);
   }
 
+  handleClick = (event) => {
+    this.props.getNpcs(event.target.id);
+  }
+
   render() {
     return (
       <Router>

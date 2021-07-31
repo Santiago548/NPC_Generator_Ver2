@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_07_28_163753) do
     t.integer "cha"
     t.string "npcClass"
     t.string "trait"
+    t.string "background"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

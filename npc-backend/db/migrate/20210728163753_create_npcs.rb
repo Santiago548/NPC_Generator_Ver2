@@ -18,6 +18,7 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.integer :cha
       t.string :npcClass
       t.string :trait
+      t.string :background
 
       t.timestamps
     end

@@ -8,10 +8,14 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
       </button>
       <div>
         <div>
-          {npc.firstName} {npc.lastName}
+          <h3>
+            {npc.firstName} {npc.lastName}
+          </h3>
           <br />
-          The {npc.title} {npc.npcClass}
+          The {npc.alignment} {npc.race} {npc.npcClass} {npc.title}
         </div>
+        <br />
+        Trait: {npc.trait}
         <br />
         HEALTH: <span>{npc.health + npc.con * 6} HP</span>
         <br />
@@ -23,15 +27,23 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
             " " +
             (parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
         </span>
-        <ul>
-            str:<li>{npc.str + "/" + (10 + (npc.str * 2))}</li>
-            dex:<li>{npc.dex + "/" + (10 + (npc.dex * 2))}</li>
-            com:<li>{npc.con + "/" + (10 + (npc.con * 2))}</li>
-            wis:<li>{npc.wis + "/" + (10 + (npc.wis * 2))}</li>
-            cha:<li>{npc.cha + "/" + (10 + (npc.cha * 2))}</li>
-        </ul>
+        <br />
+        <div>
+          STR: | DEX: | CON: | WIS: | CHA:
+          <div>
+            {"+" + npc.str + " " + "/" + " " + (10 + npc.str * 2)} ||
+            {"+" + npc.dex + " " + "/" + " " + (10 + npc.dex * 2)} ||
+            {"+" + npc.con + " " + "/" + " " + (10 + npc.con * 2)} ||
+            {"+" + npc.wis + " " + "/" + " " + (10 + npc.wis * 2)} ||
+            {"+" + npc.cha + " " + "/" + " " + (10 + npc.cha * 2)} ||
+          </div>
+        </div>
+        Melee: {npc.melee} <br />
+        Ranged: {npc.ranged}
         <br />
       </div>
+      Background:
+      <fieldset>{npc.background}</fieldset>
       <br />
     </fieldset>
   </div>

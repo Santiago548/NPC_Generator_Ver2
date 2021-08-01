@@ -43,6 +43,7 @@ class NpcRandom extends Component {
         const rangeArray = ["Blowgun [1 Piercing Range (25/100)]", "Light Crossbow [1D8 Piercing Range(80/320)]", "Dart [1D4 Piercing Range(20/60)]", "Shortbow [1D6 piercing Range(80/320)]", "Sling [1D4 piercing Range(30/120) ]", "Hand Crossbow [1D6 Piercing Range(30/120)]", "Heavy Crossbow [1D10 piercing Range(100/400)]", "Longbow [1D8 piercing Range(150/600)]"]
         const strArray = [1, 2, 3, 4 , 5, 6]
         const dexArray = [1, 2, 3, 4 , 5, 6]
+        const intArray = []
         const conArray = [1, 2, 3, 4 , 5, 6]
         const wisArray = [1, 2, 3, 4 , 5, 6]
         const chaArray = [1, 2, 3, 4 , 5, 6]
@@ -287,3 +288,77 @@ class NpcRandom extends Component {
 }
 
 export default connect(null, { addNpc })(NpcRandom)
+
+
+const randomFirstNameFunction = () => {
+
+    const strArray = [1, 2, 3, 4 , 5, 6]
+    const dexArray = [1, 2, 3, 4 , 5, 6]
+    const conArray = [1, 2, 3, 4 , 5, 6]
+    const wisArray = [1, 2, 3, 4 , 5, 6]
+    const chaArray = [1, 2, 3, 4 , 5, 6]
+
+    if (randomNpcRace === "Dwarf") {
+        return strArray[Math.floor(Math.random() * strArray.length)],
+        dexArray[Math.floor(Math.random() * dexArray.length)],
+        conArray[Math.floor(Math.random() * conArray.length) + 2],
+        wisArray[Math.floor(Math.random() * wisArray.length)],
+        chaArray[Math.floor(Math.random() * chaArray.length)]
+       } else if (randomNpcRace === "Dragonborn") {
+         return strArray[Math.floor(Math.random() * strArray.length) + 2],
+         dexArray[Math.floor(Math.random() * dexArray.length)],
+         conArray[Math.floor(Math.random() * conArray.length)],
+         wisArray[Math.floor(Math.random() * wisArray.length)],
+         chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+       } else if (randomNpcRace === "Elf") {
+        return strArray[Math.floor(Math.random() * strArray.length)],
+        dexArray[Math.floor(Math.random() * dexArray.length)],
+        conArray[Math.floor(Math.random() * conArray.length)],
+        wisArray[Math.floor(Math.random() * wisArray.length)],
+        chaArray[Math.floor(Math.random() * chaArray.length)]
+      } else if (randomNpcRace === "Gnome") {
+        return strArray[Math.floor(Math.random() * strArray.length)],
+        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
+        conArray[Math.floor(Math.random() * conArray.length)],
+        wisArray[Math.floor(Math.random() * wisArray.length)],
+        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+      } else if (randomNpcRace === "Half-Elf") {
+        return strArray[Math.floor(Math.random() * strArray.length)],
+        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
+        conArray[Math.floor(Math.random() * conArray.length)],
+        wisArray[Math.floor(Math.random() * wisArray.length)],
+        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+      } else if (randomNpcRace === "Halfling") {
+        return strArray[Math.floor(Math.random() * strArray.length)],
+        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
+        conArray[Math.floor(Math.random() * conArray.length)],
+        wisArray[Math.floor(Math.random() * wisArray.length)],
+        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+      }
+
+              
+                str dex con int wis cha
+"Gnome",                    2
+                str dex con int wis cha
+"Half-Elf",+1 to two other skills   2
+                str dex con int wis cha
+"Halfling",         2
+                str dex con int wis cha
+"Human",        1   1   1   1   1   1
+                str dex con int wis cha
+"Tiefling",                 1       2
+                str dex con int wis cha
+"Goliath",      2       1
+                str dex con int wis cha
+"Firbolg",      1               2
+                str dex con int wis cha
+"Goblin",           2   1
+                str dex con int wis cha
+"Orc",          2      1    -2 
+                str dex con int wis cha
+"Tabaxi",           2               1
+                str dex con int wis cha
+"Warforged"             2   plus one to any ability score
+                str dex con int wis cha
+"Half-Orc"      2       1
+}

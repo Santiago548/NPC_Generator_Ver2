@@ -12,7 +12,9 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
             {npc.firstName} {npc.lastName}
           </h3>
           <br />
-          The {npc.alignment} {npc.race} {npc.npcClass} {npc.title}
+          The {npc.alignment} 
+          < br />
+          {npc.race} {npc.npcClass} {npc.title}
         </div>
         <br />
         Trait: {npc.trait}
@@ -31,11 +33,11 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <div>
           STR: | DEX: | CON: | WIS: | CHA:
           <div>
-            {"+" + npc.str + " " + "/" + " " + (10 + npc.str * 2)} ||
-            {"+" + npc.dex + " " + "/" + " " + (10 + npc.dex * 2)} ||
-            {"+" + npc.con + " " + "/" + " " + (10 + npc.con * 2)} ||
-            {"+" + npc.wis + " " + "/" + " " + (10 + npc.wis * 2)} ||
-            {"+" + npc.cha + " " + "/" + " " + (10 + npc.cha * 2)} ||
+            +{npc.str} /  {(10 + npc.str * 2)} ||
+            +{npc.dex} /  {(10 + npc.dex * 2)} ||
+            +{npc.con} /  {(10 + npc.con * 2)} ||
+            +{npc.wis} /  {(10 + npc.wis * 2)} ||
+            +{npc.cha} /  {(10 + npc.cha * 2)} ||
           </div>
         </div>
         Melee: {npc.melee} <br />
@@ -49,4 +51,4 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
   </div>
 );
 
-export default NpcFullCard;
+export default NpcFullCard

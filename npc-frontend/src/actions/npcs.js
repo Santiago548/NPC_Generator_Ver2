@@ -48,11 +48,11 @@ export const deleteNpc = (id) => {
 
 export const getNpcFullCard = (id) => {
     return(dispatch) => {
-        dispatch({ type: "LOADING_NPC"})
+        dispatch({ type: "FETCH_NPC"})
         fetch(`/npcs/${id}`)
         .then(res => res.json())
         .then(npc => dispatch({
-            type:  "NPC_LOADED",
+            type:  "NPC_FETCHED",
             payload: npc
         }))
     }

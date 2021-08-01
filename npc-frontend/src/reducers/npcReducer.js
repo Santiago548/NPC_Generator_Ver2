@@ -12,12 +12,12 @@ export default (state = { npcs: [], loading: false }, action) => {
         loading: false,
       };
 
-    case "LOADING_NPC":
+    case "FETCH_NPC":
       return {
         ...state,
         loading: true,
       };
-    case "NPC_LOADED":
+    case "NPC_FETCHED":
       return {
         ...state,
         npcs: [...state.npcs.filter((npc) => npc.id === parseInt(action.payload.id))],

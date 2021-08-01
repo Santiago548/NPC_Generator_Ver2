@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import NpcPreviewCard from "../components/npcPreviewCard";
 import { deleteNpc, getNpcFullCard } from "../actions/npcs";
-import NpcFullCard from '../components/npcFullCard'
+import NpcFullCard from "../components/npcFullCard";
+
 class NpcHome extends Component {
  
   render() {
@@ -24,7 +25,6 @@ class NpcHome extends Component {
           {npcs.map((npc) => (
             <NpcFullCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
           ))}
-            
         </div>
       </div>
     );

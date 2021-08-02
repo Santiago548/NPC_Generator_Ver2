@@ -31,11 +31,12 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         </span>
         <br />
         <div>
-          STR: | DEX: | CON: | WIS: | CHA:
+          STR: | DEX: | CON: | INT: | WIS: | CHA:
           <div>
             +{npc.str} /  {(10 + npc.str * 2)} ||
             +{npc.dex} /  {(10 + npc.dex * 2)} ||
             +{npc.con} /  {(10 + npc.con * 2)} ||
+            +{npc.int} /  {(10 + npc.int * 2)} ||
             +{npc.wis} /  {(10 + npc.wis * 2)} ||
             +{npc.cha} /  {(10 + npc.cha * 2)} ||
           </div>

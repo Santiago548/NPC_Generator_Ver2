@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_07_28_163753) do
     t.integer "str"
     t.integer "dex"
     t.integer "con"
+    t.integer "int"
     t.integer "wis"
     t.integer "cha"
     t.string "npcClass"

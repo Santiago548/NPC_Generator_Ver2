@@ -22,6 +22,7 @@ class NpcRandom extends Component {
             str: "",
             dex: "",
             con: "",
+            int: "",
             wis: "",
             cha: "",
             npcClass: "",
@@ -41,12 +42,12 @@ class NpcRandom extends Component {
         const armorArray = ["Padded 11", "Leather 11", "Studded-Leather 12", "Hide 12", "Chain-Shirt 13", "Scale-Mail 14", "Spiked-Armor 14", "Breatplate 14", "Halfplate 15", "Ring-Mail 14", "Chain-Mail 16", "Splint 17","Plate 18"]
         const meleeArray = ["Battle Axe [1d8 Slashing]", "Club [1d4 Bludgeoning]", "Dagger [1d4 piercing]", "Greataxe [1d12 Slashing]", "Great Club [1d8 Bludgeoning]", "Hand Axe [1d6 Slashing]", "Long Sword [1d8 Slashing]", "Quarterstaff [1d6 Bludgeoning]", "Rapier [1d8 Piercing]", "Scimitar [1d6 Slashing]", "Short Sword [1d6 Slashing]"]
         const rangeArray = ["Blowgun [1 Piercing Range (25/100)]", "Light Crossbow [1D8 Piercing Range(80/320)]", "Dart [1D4 Piercing Range(20/60)]", "Shortbow [1D6 piercing Range(80/320)]", "Sling [1D4 piercing Range(30/120) ]", "Hand Crossbow [1D6 Piercing Range(30/120)]", "Heavy Crossbow [1D10 piercing Range(100/400)]", "Longbow [1D8 piercing Range(150/600)]"]
-        const strArray = [1, 2, 3, 4 , 5, 6]
-        const dexArray = [1, 2, 3, 4 , 5, 6]
-        const intArray = []
-        const conArray = [1, 2, 3, 4 , 5, 6]
-        const wisArray = [1, 2, 3, 4 , 5, 6]
-        const chaArray = [1, 2, 3, 4 , 5, 6]
+        // const strArray = [1, 2, 3, 4, 5, 6]
+        // const dexArray = [1, 2, 3, 4, 5, 6]
+        // const intArray = [1, 2, 3, 4, 5, 6]
+        // const conArray = [1, 2, 3, 4, 5, 6]
+        // const wisArray = [1, 2, 3, 4, 5, 6]
+        // const chaArray = [1, 2, 3, 4, 5, 6]
         const npcClassArray = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard", "Artificer"]
         const traitArray = ["Honest", "Brave", "Compassionate", "Leader", "Courageous", "Unselfish", "Loyal", "Hard-working", "Independent", "Selfish", "Responsible", "Considerate", "Self-confident", "Humble", "Poor", "Rich", "Strong", "Tall", "Dark", "Light", "Handsome", "Pretty", "Ugly", "Messy", "Gentle", "Wild", "Joyful", "Busy", "Patriotic", "Neat", "Popular", "Successful", "Short", "Prim", "Proper", "Dainty", "Able", "Fighter", "Tireless", "Plain", "Expert", "Imaginative", "Conceited", "Mischievous", "Demanding", "Thoughtful", "Keen", "Happy", "Disagreeable", "Simple", "Fancy", "Plain", "Excited", "Studious", "Inventive", "Creative", "Thrilling", "Intelligent", "Proud", "Fun-loving", "Daring", "Bright", "Serious", "Funny", "Humorous", "Sad", "Lazy", "Dreamer", "Helpful", "Simple-minded", "Friendly", "Adventurous", "Timid", "Shy", "Pitiful", "Cooperative", "Lovable", "Ambitious", "Quiet", "Curious", "Reserved", "Pleasing", "Bossy", "Witty", "Energetic", "Cheerful", "Smart", "Impulsive", "Humorous", "Sad", "Lazy", "Dreamer", "Helpful"]
         const backgroundArray = [
@@ -161,11 +162,12 @@ class NpcRandom extends Component {
         const randomArmor = armorArray[Math.floor(Math.random() * armorArray.length)]
         const randomMelee = meleeArray[Math.floor(Math.random() * meleeArray.length)]
         const randomRanged = rangeArray[Math.floor(Math.random() * rangeArray.length)]
-        const randomStr = strArray[Math.floor(Math.random() * strArray.length)]
-        const randomDex = dexArray[Math.floor(Math.random() * dexArray.length)]
-        const randomCon = conArray[Math.floor(Math.random() * conArray.length)]
-        const randomWis = wisArray[Math.floor(Math.random() * wisArray.length)]
-        const randomCha = chaArray[Math.floor(Math.random() * chaArray.length)]
+        // const randomStr = strArray[Math.floor(Math.random() * strArray.length)]
+        // const randomDex = dexArray[Math.floor(Math.random() * dexArray.length)]
+        // const randomCon = conArray[Math.floor(Math.random() * conArray.length)]
+        // const randomInt = intArray[Math.floor(Math.random() * intArray.length)]
+        // const randomWis = wisArray[Math.floor(Math.random() * wisArray.length)]
+        // const randomCha = chaArray[Math.floor(Math.random() * chaArray.length)]
         const randomNpcClass = npcClassArray[Math.floor(Math.random() * npcClassArray.length)]
         const randomTrait = traitArray[Math.floor(Math.random() * traitArray.length)]
         const randomBackground = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
@@ -229,6 +231,227 @@ class NpcRandom extends Component {
              return barbarianTitleArray[Math.floor(Math.random() * barbarianTitleArray.length)]
             }
         }
+
+        const randomStrFunction = () => {
+
+          const strArray = [1, 2, 3, 4, 5, 6]
+      
+          if (randomRace === "Dwarf") {
+              return strArray[Math.floor(Math.random() * strArray.length)]
+             } else if (randomRace === "Dragonborn") {
+               return strArray[Math.floor(Math.random() * strArray.length) + 2]        
+             } else if (randomRace === "Elf") {
+              return strArray[Math.floor(Math.random() * strArray.length)]      
+            } else if (randomRace === "Gnome") {
+              return strArray[Math.floor(Math.random() * strArray.length)]        
+            } else if (randomRace === "Half-Elf") {
+              return strArray[Math.floor(Math.random() * strArray.length)]        
+            } else if (randomRace === "Halfling") {
+              return strArray[Math.floor(Math.random() * strArray.length)]
+            } else if (randomRace === "Human") {
+              return strArray[Math.floor(Math.random() * strArray.length)]        
+            } else if (randomRace === "Tiefling") {
+              return strArray[Math.floor(Math.random() * strArray.length)]        
+            } else if (randomRace === "Goliath") {
+              return strArray[Math.floor(Math.random() * strArray.length) + 2]       
+            } else if (randomRace === "Firbolg") {
+              return strArray[Math.floor(Math.random() * strArray.length) + 1]        
+            } else if (randomRace === "Goblin") {
+              return strArray[Math.floor(Math.random() * strArray.length)]      
+            } else if (randomRace === "Orc") {
+              return strArray[Math.floor(Math.random() * strArray.length) + 2]       
+            } else if (randomRace === "Tabaxi") {
+              return strArray[Math.floor(Math.random() * strArray.length)]        
+            } else if (randomRace === "Warfoged") {
+              return strArray[Math.floor(Math.random() * strArray.length)]  
+            } else if (randomRace === "half-Orc") {
+              return strArray[Math.floor(Math.random() * strArray.length) + 2]       
+            }
+          }
+      
+      
+          const randomDexFunction = () => {
+              
+              const dexArray = [1, 2, 3, 4, 5, 6]
+      
+              if (randomRace === "Dwarf") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]
+                 } else if (randomRace === "Dragonborn") {
+                   return dexArray[Math.floor(Math.random() * dexArray.length)]
+                  } else if (randomRace === "Elf") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]    
+                } else if (randomRace === "Gnome") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]
+                } else if (randomRace === "Half-Elf") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)+ 2]       
+                } else if (randomRace === "Halfling") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)+ 2]
+                } else if (randomRace === "Human") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length) + 1]          
+                } else if (randomRace === "Tiefling") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]            
+                } else if (randomRace === "Goliath") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)] 
+                } else if (randomRace === "Firbolg") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]          
+                } else if (randomRace === "Goblin") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length) + 2]            
+                } else if (randomRace === "Orc") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]            
+                } else if (randomRace === "Tabaxi") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)+ 2]           
+                } else if (randomRace === "Warfoged") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]
+                } else if (randomRace === "half-Orc") {
+                  return dexArray[Math.floor(Math.random() * dexArray.length)]
+                }
+          }
+      
+          const randomConFunction = () => {
+      
+              const conArray = [1, 2, 3, 4, 5, 6]
+      
+              if (randomRace === "Dwarf") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 2]
+                 } else if (randomRace === "Dragonborn") {
+                   return conArray[Math.floor(Math.random() * conArray.length)]
+                 } else if (randomRace === "Elf") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Gnome") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Half-Elf") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Halfling") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Human") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 1]
+                } else if (randomRace === "Tiefling") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Goliath") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 1]
+                } else if (randomRace === "Firbolg") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Goblin") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 1]
+                } else if (randomRace === "Orc") {
+                  return conArray[Math.floor(Math.random() * conArray.length)] 
+                } else if (randomRace === "Tabaxi") {
+                  return conArray[Math.floor(Math.random() * conArray.length)]
+                } else if (randomRace === "Warfoged") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 2 ]
+                } else if (randomRace === "half-Orc") {
+                  return conArray[Math.floor(Math.random() * conArray.length) + 1]
+                }
+          }
+      
+          const randomWisFunction = () => {
+      
+              const wisArray = [1, 2, 3, 4, 5, 6]
+      
+              if (randomRace === "Dwarf") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                 } else if (randomRace === "Dragonborn") {
+                   return  wisArray[Math.floor(Math.random() * wisArray.length)]
+                 } else if (randomRace === "Elf") {
+                  return  wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Gnome") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Half-Elf") {
+                  return  wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Halfling") {
+                  return  wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Human") {
+                  return  wisArray[Math.floor(Math.random() * wisArray.length) + 1]
+                } else if (randomRace === "Tiefling") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Goliath") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Firbolg") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length) + 2]
+                } else if (randomRace === "Goblin") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Orc") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "Tabaxi") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]  
+                } else if (randomRace === "Warfoged") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                } else if (randomRace === "half-Orc") {
+                  return wisArray[Math.floor(Math.random() * wisArray.length)]
+                }
+          }
+          const randomIntFunction = () => {
+      
+              const intArray = [1, 2, 3, 4, 5, 6]
+      
+              if (randomRace === "Dwarf") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                 } else if (randomRace === "Dragonborn") {
+                   return intArray[Math.floor(Math.random() * intArray.length)]
+                 } else if (randomRace === "Elf") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Gnome") {
+                  return intArray[Math.floor(Math.random() * intArray.length) + 2]
+                } else if (randomRace === "Half-Elf") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Halfling") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Human") {
+                  return intArray[Math.floor(Math.random() * intArray.length) + 1]
+                } else if (randomRace === "Tiefling") {
+                  return intArray[Math.floor(Math.random() * intArray.length) + 1]
+                } else if (randomRace === "Goliath") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Firbolg") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Goblin") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Orc") {
+                  return intArray[Math.floor(Math.random() * intArray.length) - 2]
+                } else if (randomRace === "Tabaxi") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "Warfoged") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                } else if (randomRace === "half-Orc") {
+                  return intArray[Math.floor(Math.random() * intArray.length)]
+                }
+          }
+          const randomChaFunction = () => {
+      
+              const chaArray = [1, 2, 3, 4, 5, 6]
+      
+              if (randomRace === "Dwarf") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                 } else if (randomRace === "Dragonborn") {
+                   return chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+                 } else if (randomRace === "Elf") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Gnome") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Half-Elf") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+                } else if (randomRace === "Halfling") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Human") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+                } else if (randomRace === "Tiefling") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length) + 2]
+                } else if (randomRace === "Goliath") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Firbolg") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Goblin") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Orc") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "Tabaxi") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length) + 1]
+                } else if (randomRace === "Warfoged") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                } else if (randomRace === "half-Orc") {
+                  return chaArray[Math.floor(Math.random() * chaArray.length)]
+                }
+          }
         
         
 
@@ -242,11 +465,12 @@ class NpcRandom extends Component {
         const armor = randomArmor
         const melee = randomMelee
         const ranged = randomRanged
-        const str = randomStr
-        const dex = randomDex
-        const con = randomCon
-        const wis = randomWis
-        const cha = randomCha
+        const str = randomStrFunction()
+        const dex = randomDexFunction()
+        const con = randomConFunction()
+        const int = randomIntFunction()
+        const wis = randomWisFunction()
+        const cha = randomChaFunction()
         const npcClass = randomNpcClass
         const trait = randomTrait
         const background = randomBackground
@@ -265,6 +489,7 @@ class NpcRandom extends Component {
             str: this.state.str + str,
             dex: this.state.dex + dex,
             con: this.state.con + con,
+            int: this.state.int + int,
             wis: this.state.wis + wis,
             cha: this.state.cha + cha,
             npcClass: this.state.npcClass + npcClass,
@@ -290,75 +515,11 @@ class NpcRandom extends Component {
 export default connect(null, { addNpc })(NpcRandom)
 
 
-const randomFirstNameFunction = () => {
-
-    const strArray = [1, 2, 3, 4 , 5, 6]
-    const dexArray = [1, 2, 3, 4 , 5, 6]
-    const conArray = [1, 2, 3, 4 , 5, 6]
-    const wisArray = [1, 2, 3, 4 , 5, 6]
-    const chaArray = [1, 2, 3, 4 , 5, 6]
-
-    if (randomNpcRace === "Dwarf") {
-        return strArray[Math.floor(Math.random() * strArray.length)],
-        dexArray[Math.floor(Math.random() * dexArray.length)],
-        conArray[Math.floor(Math.random() * conArray.length) + 2],
-        wisArray[Math.floor(Math.random() * wisArray.length)],
-        chaArray[Math.floor(Math.random() * chaArray.length)]
-       } else if (randomNpcRace === "Dragonborn") {
-         return strArray[Math.floor(Math.random() * strArray.length) + 2],
-         dexArray[Math.floor(Math.random() * dexArray.length)],
-         conArray[Math.floor(Math.random() * conArray.length)],
-         wisArray[Math.floor(Math.random() * wisArray.length)],
-         chaArray[Math.floor(Math.random() * chaArray.length) + 1]
-       } else if (randomNpcRace === "Elf") {
-        return strArray[Math.floor(Math.random() * strArray.length)],
-        dexArray[Math.floor(Math.random() * dexArray.length)],
-        conArray[Math.floor(Math.random() * conArray.length)],
-        wisArray[Math.floor(Math.random() * wisArray.length)],
-        chaArray[Math.floor(Math.random() * chaArray.length)]
-      } else if (randomNpcRace === "Gnome") {
-        return strArray[Math.floor(Math.random() * strArray.length)],
-        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
-        conArray[Math.floor(Math.random() * conArray.length)],
-        wisArray[Math.floor(Math.random() * wisArray.length)],
-        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
-      } else if (randomNpcRace === "Half-Elf") {
-        return strArray[Math.floor(Math.random() * strArray.length)],
-        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
-        conArray[Math.floor(Math.random() * conArray.length)],
-        wisArray[Math.floor(Math.random() * wisArray.length)],
-        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
-      } else if (randomNpcRace === "Halfling") {
-        return strArray[Math.floor(Math.random() * strArray.length)],
-        dexArray[Math.floor(Math.random() * dexArray.length)+ 2],
-        conArray[Math.floor(Math.random() * conArray.length)],
-        wisArray[Math.floor(Math.random() * wisArray.length)],
-        chaArray[Math.floor(Math.random() * chaArray.length) + 1]
-      }
 
               
-                str dex con int wis cha
-"Gnome",                    2
-                str dex con int wis cha
-"Half-Elf",+1 to two other skills   2
-                str dex con int wis cha
-"Halfling",         2
-                str dex con int wis cha
-"Human",        1   1   1   1   1   1
-                str dex con int wis cha
-"Tiefling",                 1       2
-                str dex con int wis cha
-"Goliath",      2       1
-                str dex con int wis cha
-"Firbolg",      1               2
-                str dex con int wis cha
-"Goblin",           2   1
-                str dex con int wis cha
-"Orc",          2      1    -2 
-                str dex con int wis cha
-"Tabaxi",           2               1
-                str dex con int wis cha
-"Warforged"             2   plus one to any ability score
-                str dex con int wis cha
-"Half-Orc"      2       1
-}
+//                 str dex con int wis cha
+// "Half-Elf",+1 to two other skills   2
+
+
+//                 str dex con int wis cha
+// "Warforged"             2   plus one to any ability score

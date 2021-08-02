@@ -14,6 +14,7 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.integer :str
       t.integer :dex
       t.integer :con
+      t.integer :int
       t.integer :wis
       t.integer :cha
       t.string :npcClass

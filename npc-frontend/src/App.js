@@ -5,6 +5,8 @@ import { getNpcs, deleteNpc, getNpcFullCard } from "./actions/npcs";
 import NpcContainer from "./containers/npcContainer";
 import Navigation from "./components/Navigation";
 import { About } from "./components/about"
+import { NpcClasses } from "./components/NpcClasses"
+import { NpcRaces } from "./components/NpcRaces"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -34,6 +36,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={NpcContainer} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/classes" component={NpcClasses} />
+            <Route exact path="/races" component={NpcRaces} />
           </Switch>
           <hr />
          

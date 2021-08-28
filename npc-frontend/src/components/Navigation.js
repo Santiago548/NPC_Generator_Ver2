@@ -30,6 +30,24 @@ const Navigation = () => {
                     color: 'white'
                 }}>ABOUT</NavLink>
 
+            <NavLink
+                to='/classes'
+                exact
+                style={link}
+                activeStyle={{
+                    background: "#191d32",
+                    color: 'white'
+                }}>CLASSSES</NavLink>
+
+            <NavLink
+                to='/races'
+                exact
+                style={link}
+                activeStyle={{
+                    background: "#191d32",
+                    color: 'white'
+                }}>RACES</NavLink>
+
 
         </div>
     )

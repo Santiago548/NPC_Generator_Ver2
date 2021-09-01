@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { addNpc } from '../actions/npcs'
 import { connect } from 'react-redux'
+import RaceArray from '../components/RaceArray'
 
 
 class NpcRandom extends Component {
@@ -35,8 +36,11 @@ class NpcRandom extends Component {
         event.preventDefault()
         
         const LastNameArray = ["Atwater", "Agassi", "Apatow", "Akagawa", "Averescu", "Arrington", "Agrippa", "Aiken", "Albertson", "Alexander", "Amado", "Anders", "Ashsorrow", "Humblecut", "Ashbluff", "Marblemaw", "Armas", "Akka", "Aoki", "Aldrich", "Apak", "Alinsky", "Desai", "Darby", "Draper", "Dwyer", "Dixon", "Danton", "Desmith", "Ditka", "Dominguez", "Decker", "Dobermann", "Dunlop", "Dumont", "Dandridge", "Diamond", "Dobra", "Dukas", "Agnello", "Alterio", "Bidbury", "Botkin", "Benoit", "Biddercombe", "Baldwin", "Bennett", "Bourland", "Boadle", "Bender", "Best", "Bobshaw", "Bersa", "Belt", "Bourn", "Barke", "Beebe", "Banu", "Bozzelli", "Bogaerts", "Blanks", "Evert", "Eastwood", "Elway", "Eslinger", "Ellerbrock", "Eno", "Endo", "Etter", "Ebersol", "Everson", "Esapa", "Ekker", "Escobar", "Eggleston", "Ermine", "Erickson", "Keller", "Kessler", "Kobayashi", "Klecko", "Kicklighter", "Kidder", "Kershaw", "Kaminsky", "Kirby", "Keene", "Kenny", "Keogh", "Kipps", "Kendrick", "Kuang", "Fairchild", "October", "Vespertine", "Fellowes", "Omen", "Willow", "Gannon", "Presto", "Windward", "Grell", "Powers", "Wixx", "Halliwell", "Quellings", "Xanthos", "Hightower", "Quill", "Xenides", "Idlewind", "Rast", "Chamillet", "Bougaitelet", "Hallowswift", "Coldsprinter", "Winddane", "Yarrow", "Illfate", "Riddle", "Yew", "Jacaranda", "Yearwood", "Yellen", "Yaeger", "Yankovich", "Yamaguchi", "Yarborough", "${firstName}ngblood", "Yanetta", "Yadao", "Winchell", "Winters", "Walsh", "Whalen", "Watson", "Wooster", "Woodson", "Winthrop", "Wall", "Sacredpelt", "Rapidclaw", "Hazerider", "Shadegrove", "Wight", "Webb", "Woodard", "Wixx", "Wong", "Whesker", "Yale", "Yasumoto", "Yates", "${firstName}nger", "Yoakum", "York", "Rigby", "Zaba", "Surrett", "Swiatek", "Sloane", "Stapleton", "Seibert", "Stroud", "Strode", "Stockton", "Scardino", "Spacek", "Spieth", "Stitchen", "Stiner", "Soria", "Saxon", "Shields", "Stelly", "Steele", "Chanassard", "Ronchessac", "Boneflare", "Monsterbelly", "Truthbelly", "Sacredmore", "Malfoy", "Moses", "Moody", "Morozov", "Mason", "Metcalf", "McGillicutty", "Montero", "Molinari", "Marsh", "Moffett", "McCabe", "Manus", "Malenko", "Mullinax", "Morrissey", "Mantooth", "Mintz", "Groves-Chestnut", "Cheever-Waters", "Bartleby-Everson", "Acoff-Sereno", "Sloane-Hooper", "Coffey-Macklin", "Sisko-Sinclair", "Lichter-Seibert", "Zubarry-Devlin", "Dabney-Aparo", "Glick-Wilcox", "Winchell-Ojeda"]
-        const raceArray = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human", "Tiefling", "Goliath", "Firbolg", "Goblin", "Orc", "Tabaxi", "Warforged"]
+        const raceArray = RaceArray.RaceArray
+        console.log(RaceArray.RaceArray)
+        // const raceArray = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human", "Tiefling", "Goliath", "Firbolg", "Goblin", "Orc", "Tabaxi", "Warforged"]
         const sexArray = ["Male", "Female", "Non-Binary"]
+        console.log(sexArray)
         const alignmentArray = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
         const healthArray = [10, 15, 20, 25, 30]
         const armorArray = ["Padded 11", "Leather 11", "Studded-Leather 12", "Hide 12", "Chain-Shirt 13", "Scale-Mail 14", "Spiked-Armor 14", "Breatplate 14", "Halfplate 15", "Ring-Mail 14", "Chain-Mail 16", "Splint 17","Plate 18"]
@@ -57,6 +61,7 @@ class NpcRandom extends Component {
 
         const randomLastname = LastNameArray[Math.floor(Math.random() * LastNameArray.length)]
         const randomRace = raceArray[Math.floor(Math.random() * raceArray.length)]
+        console.log(randomRace)
         const randomSex = sexArray[Math.floor(Math.random() * sexArray.length)]
         const randomAlignment = alignmentArray[Math.floor(Math.random() * alignmentArray.length)]
         const randomHealth = healthArray[Math.floor(Math.random() * healthArray.length)]

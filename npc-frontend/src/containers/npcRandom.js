@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { addNpc } from '../actions/npcs'
 import { connect } from 'react-redux'
 import RaceArray from '../components/RaceArray'
-
+import NpcClassArray from '../components/NpcClassArray'
+import TraitArray from '../components/TraitArray'
 
 class NpcRandom extends Component {
 
@@ -37,8 +38,6 @@ class NpcRandom extends Component {
         
         const LastNameArray = ["Atwater", "Agassi", "Apatow", "Akagawa", "Averescu", "Arrington", "Agrippa", "Aiken", "Albertson", "Alexander", "Amado", "Anders", "Ashsorrow", "Humblecut", "Ashbluff", "Marblemaw", "Armas", "Akka", "Aoki", "Aldrich", "Apak", "Alinsky", "Desai", "Darby", "Draper", "Dwyer", "Dixon", "Danton", "Desmith", "Ditka", "Dominguez", "Decker", "Dobermann", "Dunlop", "Dumont", "Dandridge", "Diamond", "Dobra", "Dukas", "Agnello", "Alterio", "Bidbury", "Botkin", "Benoit", "Biddercombe", "Baldwin", "Bennett", "Bourland", "Boadle", "Bender", "Best", "Bobshaw", "Bersa", "Belt", "Bourn", "Barke", "Beebe", "Banu", "Bozzelli", "Bogaerts", "Blanks", "Evert", "Eastwood", "Elway", "Eslinger", "Ellerbrock", "Eno", "Endo", "Etter", "Ebersol", "Everson", "Esapa", "Ekker", "Escobar", "Eggleston", "Ermine", "Erickson", "Keller", "Kessler", "Kobayashi", "Klecko", "Kicklighter", "Kidder", "Kershaw", "Kaminsky", "Kirby", "Keene", "Kenny", "Keogh", "Kipps", "Kendrick", "Kuang", "Fairchild", "October", "Vespertine", "Fellowes", "Omen", "Willow", "Gannon", "Presto", "Windward", "Grell", "Powers", "Wixx", "Halliwell", "Quellings", "Xanthos", "Hightower", "Quill", "Xenides", "Idlewind", "Rast", "Chamillet", "Bougaitelet", "Hallowswift", "Coldsprinter", "Winddane", "Yarrow", "Illfate", "Riddle", "Yew", "Jacaranda", "Yearwood", "Yellen", "Yaeger", "Yankovich", "Yamaguchi", "Yarborough", "${firstName}ngblood", "Yanetta", "Yadao", "Winchell", "Winters", "Walsh", "Whalen", "Watson", "Wooster", "Woodson", "Winthrop", "Wall", "Sacredpelt", "Rapidclaw", "Hazerider", "Shadegrove", "Wight", "Webb", "Woodard", "Wixx", "Wong", "Whesker", "Yale", "Yasumoto", "Yates", "${firstName}nger", "Yoakum", "York", "Rigby", "Zaba", "Surrett", "Swiatek", "Sloane", "Stapleton", "Seibert", "Stroud", "Strode", "Stockton", "Scardino", "Spacek", "Spieth", "Stitchen", "Stiner", "Soria", "Saxon", "Shields", "Stelly", "Steele", "Chanassard", "Ronchessac", "Boneflare", "Monsterbelly", "Truthbelly", "Sacredmore", "Malfoy", "Moses", "Moody", "Morozov", "Mason", "Metcalf", "McGillicutty", "Montero", "Molinari", "Marsh", "Moffett", "McCabe", "Manus", "Malenko", "Mullinax", "Morrissey", "Mantooth", "Mintz", "Groves-Chestnut", "Cheever-Waters", "Bartleby-Everson", "Acoff-Sereno", "Sloane-Hooper", "Coffey-Macklin", "Sisko-Sinclair", "Lichter-Seibert", "Zubarry-Devlin", "Dabney-Aparo", "Glick-Wilcox", "Winchell-Ojeda"]
         const raceArray = RaceArray.RaceArray
-        console.log(RaceArray.RaceArray)
-        // const raceArray = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Human", "Tiefling", "Goliath", "Firbolg", "Goblin", "Orc", "Tabaxi", "Warforged"]
         const sexArray = ["Male", "Female", "Non-Binary"]
         console.log(sexArray)
         const alignmentArray = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
@@ -52,8 +51,8 @@ class NpcRandom extends Component {
         // const conArray = [1, 2, 3, 4, 5, 6]
         // const wisArray = [1, 2, 3, 4, 5, 6]
         // const chaArray = [1, 2, 3, 4, 5, 6]
-        const npcClassArray = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard", "Artificer"]
-        const traitArray = ["Honest", "Brave", "Compassionate", "Leader", "Courageous", "Unselfish", "Loyal", "Hard-working", "Independent", "Selfish", "Responsible", "Considerate", "Self-confident", "Humble", "Poor", "Rich", "Strong", "Tall", "Dark", "Light", "Handsome", "Pretty", "Ugly", "Messy", "Gentle", "Wild", "Joyful", "Busy", "Patriotic", "Neat", "Popular", "Successful", "Short", "Prim", "Proper", "Dainty", "Able", "Fighter", "Tireless", "Plain", "Expert", "Imaginative", "Conceited", "Mischievous", "Demanding", "Thoughtful", "Keen", "Happy", "Disagreeable", "Simple", "Fancy", "Plain", "Excited", "Studious", "Inventive", "Creative", "Thrilling", "Intelligent", "Proud", "Fun-loving", "Daring", "Bright", "Serious", "Funny", "Humorous", "Sad", "Lazy", "Dreamer", "Helpful", "Simple-minded", "Friendly", "Adventurous", "Timid", "Shy", "Pitiful", "Cooperative", "Lovable", "Ambitious", "Quiet", "Curious", "Reserved", "Pleasing", "Bossy", "Witty", "Energetic", "Cheerful", "Smart", "Impulsive", "Humorous", "Sad", "Lazy", "Dreamer", "Helpful"]
+        const npcClassArray = NpcClassArray.NpcClassArray
+        const traitArray = TraitArray.TraitArray
         
         // const backgroundArray = [
             

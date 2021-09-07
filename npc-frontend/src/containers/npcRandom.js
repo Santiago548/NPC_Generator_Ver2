@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { addNpc } from '../actions/npcs'
 import { connect } from 'react-redux'
-import RaceArray from '../components/RaceArray'
-import NpcClassArray from '../components/NpcClassArray'
-import TraitArray from '../components/TraitArray'
-import LastNameArray from '../components/LastNameArray'
-import RangedWeaponsArray from '../components/RangedWeaponsArray'
-import MeleeWeaponsArray from '../components/MeleeWeaponsArray'
+import RaceArray from '../assets/RaceArray'
+import NpcClassArray from '../assets/NpcClassArray'
+import TraitArray from '../assets/TraitArray'
+import LastNameArray from '../assets/LastNameArray'
+import RangedWeaponsArray from '../assets/RangedWeaponsArray'
+import MeleeWeaponsArray from '../assets/MeleeWeaponsArray'
 
 class NpcRandom extends Component {
 
@@ -21,7 +21,7 @@ class NpcRandom extends Component {
         const alignmentArray = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
         const healthArray = [10, 15, 20, 25, 30]
         const armorArray = ["Padded 11", "Leather 11", "Studded-Leather 12", "Hide 12", "Chain-Shirt 13", "Scale-Mail 14", "Spiked-Armor 14", "Breatplate 14", "Halfplate 15", "Ring-Mail 14", "Chain-Mail 16", "Splint 17","Plate 18"]
-        const meleeArray = MeleeWeaponsArray.MeleeWeaponsArray
+        const meleeArray = MeleeWeaponsArray.MeleeWeaponsArraydsfa
         const rangeArray = RangedWeaponsArray.RangedWeaponsArray
         const npcClassArray = NpcClassArray.NpcClassArray
         const traitArray = TraitArray.TraitArray

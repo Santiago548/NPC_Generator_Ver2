@@ -13,18 +13,4 @@ export const ArtificerTitleArray = [ "Alchemist", "Armorer", "Artillerist", "Bat
 export const BarbarianTitleArray = [ "Thug", "Brute", "Mauler", "Aggressor", "Plunderer", "Bloodrager", "Slaughterer", "Rampager", "Bloodletter", "Destroyer"]
 
     
-    export default { 
-        FighterTitleArray,
-        WizardTitleArray,
-        SorcererTitleArray,
-        WarlockTitleArray,
-        ClericTitleArray,
-        RogueTitleArray,
-        DruidTitleArray,
-        MonkTitleArray,
-        PaladinTitleArray,
-        RangerTitleArray,
-        BardTitleArray,
-        ArtificerTitleArray,
-        BarbarianTitleArray
-    }
+ 

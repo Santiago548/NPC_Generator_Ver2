@@ -40,7 +40,10 @@ class NpcRandom extends Component {
         const rangeArray = RangedWeaponsArray.RangedWeaponsArray
         const npcClassArray = NpcClassArray.NpcClassArray
         const traitArray = TraitArray.TraitArray
-        
+        const quirk1Array = QuirkArray.QuirkArray
+        const quirk2Array = QuirkArray.QuirkArray
+        const physicalTraitArray = PhysicalTrait.PhysicalTrait
+      
 
         const randomLastname = lastNameArray[Math.floor(Math.random() * lastNameArray.length)]
         const randomRace = raceArray[Math.floor(Math.random() * raceArray.length)]

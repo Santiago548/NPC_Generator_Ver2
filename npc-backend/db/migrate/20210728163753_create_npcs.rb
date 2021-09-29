@@ -20,6 +20,9 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.string :npcClass
       t.string :trait
       t.string :background
+      t.string :quirk1
+      t.string :quirk2
+      t.string :notablePhysicalFeature
 
       t.timestamps
     end

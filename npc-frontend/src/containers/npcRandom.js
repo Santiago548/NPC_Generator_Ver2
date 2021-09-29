@@ -9,6 +9,8 @@ import RangedWeaponsArray from '../assets/RangedWeaponsArray'
 import MeleeWeaponsArray from '../assets/MeleeWeaponsArray'
 // // import BackgroundArray from '../assets/BackgroundArray'
 import ArmorArray from '../assets/ArmorArray'
+import QuirkArray from '../assets/QuirkArray'
+import { PhysicalTraitArray } from '../assets/PhysicalTrait'
 import { FighterTitleArray,
         WizardTitleArray,
         SorcererTitleArray,
@@ -55,6 +57,9 @@ class NpcRandom extends Component {
         const randomRanged = rangeArray[Math.floor(Math.random() * rangeArray.length)]
         const randomNpcClass = npcClassArray[Math.floor(Math.random() * npcClassArray.length)]
         const randomTrait = traitArray[Math.floor(Math.random() * traitArray.length)]
+        const randomQuirk1 = quirk1Array[Math.floor(Math.random() * quirk1Array.length)]
+        const randomQuirk2 = quirk2Array[Math.floor(Math.random() * quirk2Array.length)]
+        const randomPhysicalTrait = physicalTraitArray[Math.floor(Math.random() * physicalTraitArray.length)]
         // const randomBackground = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
         const randomFirstNameFunction = () => {
 
@@ -463,6 +468,9 @@ class NpcRandom extends Component {
 
         const randomBackground = backgroundArray[Math.floor(Math.random() * backgroundArray.length)]
         const background = randomBackground
+        const quirk1 = randomQuirk1
+        const quirk2 = randomQuirk2
+        const physicalTrait = randomPhysicalTrait
         
         const npcToAdd = {
             firstName: firstName,
@@ -483,7 +491,11 @@ class NpcRandom extends Component {
             cha: cha,
             npcClass: npcClass,
             trait: trait,
-            background: background
+            background: background,
+            quirk1: quirk1,
+            quirk2: quirk2,
+            notablePhysicalFeature: physicalTrait
+
         }
         this.props.addNpc(npcToAdd)
     }

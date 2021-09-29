@@ -24,14 +24,15 @@
 
 .npc-container {
   width: auto;
+  margin: auto;
 }
 
-.npc-list {
+/* .npc-list {
 float: left;
 width: 50%;
-}
+} */
 
 .npc-full-card {
-  float: right;
-  width: 50%;
+  width: 80%;
+  margin: auto;
 }

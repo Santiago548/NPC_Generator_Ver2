@@ -10,7 +10,8 @@ import MeleeWeaponsArray from '../assets/MeleeWeaponsArray'
 // // import BackgroundArray from '../assets/BackgroundArray'
 import ArmorArray from '../assets/ArmorArray'
 import QuirkArray from '../assets/QuirkArray'
-import { PhysicalTraitArray } from '../assets/PhysicalTrait'
+import PhysicalTraitArray from '../assets/PhysicalTraitArray'
+
 import { FighterTitleArray,
         WizardTitleArray,
         SorcererTitleArray,
@@ -44,7 +45,7 @@ class NpcRandom extends Component {
         const traitArray = TraitArray.TraitArray
         const quirk1Array = QuirkArray.QuirkArray
         const quirk2Array = QuirkArray.QuirkArray
-        const physicalTraitArray = PhysicalTrait.PhysicalTrait
+        const physicalTraitArray = PhysicalTraitArray.PhysicalTraitArray
       
 
         const randomLastname = lastNameArray[Math.floor(Math.random() * lastNameArray.length)]
@@ -449,7 +450,7 @@ class NpcRandom extends Component {
           `Born an orphan, ${firstName} was adopted by a wealthy family at a ${firstName}ng age to be raised as help. (How the family treated ${firstName} growing up is up to the player.) Shortly after their 18th birthday the entire estate is burned to the ground and ${firstName} are the only known survivor. ${firstName} are suspect and wanted by the local, kingdom for questioning and crimes against the family. Can ${firstName} clear their name before the kingdom picks ${firstName} up, are ${firstName} to blame for the fire, or are ${firstName} innocent and wrongly accused? Will ${firstName} be able to find the villain in time?`,
           `A retired member of the army, ${firstName} have been jaded by war, seen far more than any one person aught to see in a hundred life times. After settling down and manning an inn for some years, ${firstName}'ve gotten the itch for adventure, and now ready to strike out on their own and see the good in the world.`,
           `Given up as sacrifice at a ${firstName}ng age by a small village to insure their harvest, ${firstName} was picked up by a band of traveling performers. Growing up with them ${firstName} traveled the country side. Upon reaching adulthood, their adopted parents told ${firstName} the truth of where ${firstName} came from. Do ${firstName} venture off for revenge? Do ${firstName} forgive and forget?`,
-          `Sold into slavery at ${firstName}ng age, ${firstName} where set free by traveling adventures early in their teen years. Since then ${firstName} have always dreamed of becoming one theirself. Not wanting to waste away their life tending to home and hearth ${firstName}'ve set out for the call of the wild.`,
+          `Sold into slavery at young age, ${firstName} was set free by traveling adventures early in their teen years. Since then ${firstName} have always dreamed of becoming one theirself. Not wanting to waste away their life tending to home and hearth ${firstName}'ve set out for the call of the wild.`,
           `Daughter of a diplomat, ${firstName} traveled the world's capitals with their father. ${firstName} grew bored of the stuffy and bureaucratic business and roamed the foreign streets and markets. It is here ${firstName} fell in with a dashing rogue who stole their heart and taught ${firstName} the secrets of his world over one glorious summer. ${firstName} resolved to embark on a career of their own choosing, not their father's.`,
           `A radiant portal spits ${firstName} out. The last words ${firstName} remembers were 'Penance'. Aasimar know who Reynar is, but won't disclose it even under torture.`,
           `Raised by pirates ${firstName} raided the wrong temple and ${firstName} was the sole surviver.`,

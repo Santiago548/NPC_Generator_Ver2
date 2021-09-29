@@ -12,14 +12,13 @@ class NpcHome extends Component {
 
     return (
       <div className="npc-container">
-        <div className="npc-list">
+        {/* <div className="npc-list">
           <h2>| Npcs |</h2>
           <hr />
           {npcs.map((npc) => (
             <NpcPreviewCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
           ))}
-          
-        </div>
+        </div> */}
         <div className="npc-full-card">
           <h2 className="app-title">| Npc |</h2>
           {npcs.map((npc) => (

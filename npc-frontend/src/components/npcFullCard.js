@@ -43,7 +43,7 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <br />
         <div>
           STR: | DEX: | CON: | INT: | WIS: | CHA:
-          <div>
+          <div className="statContainer">
             <div className="strContainer">
               <img className="strImage" src={STR} alt="strContainer" />
               <div className="strStat">

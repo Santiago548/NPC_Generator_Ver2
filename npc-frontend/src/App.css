@@ -69,6 +69,12 @@ width: 50%;
   margin-right: 0%;
 }
 
+.statContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
 .strContainer {
   position: relative;
   text-align: center;

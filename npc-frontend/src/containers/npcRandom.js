@@ -11,7 +11,7 @@ import MeleeWeaponsArray from '../assets/MeleeWeaponsArray'
 import ArmorArray from '../assets/ArmorArray'
 import QuirkArray from '../assets/QuirkArray'
 import PhysicalTraitArray from '../assets/PhysicalTraitArray'
-
+import RandomButton from '../assets/images/randomButton.png'
 import { FighterTitleArray,
         WizardTitleArray,
         SorcererTitleArray,
@@ -504,11 +504,11 @@ class NpcRandom extends Component {
     render() {
         return (
             <div>
-                <fieldset >
+                
                     <form onSubmit={this.handleClick} >
-                        <button type="submit">Random <b>NPC</b></button>
+                        <button type="submit" id="randomButton"><img src={RandomButton} id="randomButtonImage" alt="Random Button" /></button>
                     </form>
-                </fieldset>
+            
             </div>
         )
     }

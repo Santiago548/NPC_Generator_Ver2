@@ -17,11 +17,11 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
           {npc.race} {npc.npcClass} {npc.title}
         </div>
         <br />
-        <fieldset>
-        Traits: {npc.trait}
-        Quirk:{npc.quirk1}<br />
-        Quirk:{npc.quirk2}<br />
-        Physical Trait:{npc.notablePhysicalFeature}
+        <fieldset className='traits'>
+        Traits: {npc.trait}<br />
+        Quirk 1: {npc.quirk1}<br />
+        Quirk 2:{npc.quirk2}<br />
+        Physical Trait: {npc.notablePhysicalFeature}
         </fieldset>
         <br />
         HEALTH: <span>{npc.health + npc.con * 6} HP</span>

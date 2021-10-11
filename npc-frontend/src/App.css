@@ -68,3 +68,129 @@ width: 50%;
   margin-left: 0%;
   margin-right: 0%;
 }
+
+.strContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.strImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.strStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dexContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.dexImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.dexStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.conContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.conImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.conStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.intImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.intStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wisContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.wisImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.wisStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chaContainer {
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.chaImage {
+  position: relative;
+  text-align: center;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.chaStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

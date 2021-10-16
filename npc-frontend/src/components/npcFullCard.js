@@ -33,16 +33,15 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <br />
         HEALTH: <span>{npc.health + npc.con * 6} HP</span>
         <br />
-        ARMOR:{" "}
+        ARMOR:
         <span>
+              {npc.armor.split(" ").slice(0, 1)}
+              <br />
+              Armor Class: <br />
           <div className="armorContainer">
             <img className="armorImage" src={Armor} alt="armorImage" />
             <div className="armorStat">
-              {npc.armor.split(" ").slice(0, 1) +
-                " " +
-                "AC:" +
-                " " +
-                (parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
+            {(parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
             </div>
           </div>
         </span>

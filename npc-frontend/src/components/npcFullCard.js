@@ -42,7 +42,6 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         </span>
         <br />
         <div>
-          STR: | DEX: | CON: | INT: | WIS: | CHA:
           <div className="statContainer">
             <div className="strContainer">
               <img className="strImage" src={STR} alt="strContainer" />
@@ -82,12 +81,15 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
             </div>
           </div>
         </div>
+        <fieldset>
+          <legend>WEAPONS:</legend>
         Melee: {npc.melee} <br />
         Ranged: {npc.ranged}
+        </fieldset>
         <br />
       </div>
-      Background:
       <fieldset>
+      <legend>Background:</legend>
         {npc.background}
       </fieldset>
       <br />

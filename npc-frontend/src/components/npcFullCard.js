@@ -5,6 +5,7 @@ import CON from "../assets/images/conlogo.png"
 import INT from "../assets/images/intlogo.png"
 import WIS from "../assets/images/wislogo.png"
 import CHA from "../assets/images/chalogo.png"
+import Armor from "../assets/images/shield.png"
 
 const NpcFullCard = ({ npc, deleteNpc }) => (
   <div>
@@ -34,11 +35,16 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <br />
         ARMOR:{" "}
         <span>
-          {npc.armor.split(" ").slice(0, 1) +
-            " " +
-            "AC:" +
-            " " +
-            (parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
+          <div className="armorContainer">
+            <img className="armorImage" src={Armor} alt="armorImage" />
+            <div className="armorStat">
+              {npc.armor.split(" ").slice(0, 1) +
+                " " +
+                "AC:" +
+                " " +
+                (parseInt(npc.armor.split(" ").slice(1)) + npc.dex)}
+            </div>
+          </div>
         </span>
         <br />
         <div>
@@ -83,13 +89,13 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         </div>
         <fieldset>
           <legend>WEAPONS:</legend>
-        Melee: {npc.melee} <br />
-        Ranged: {npc.ranged}
+          Melee: {npc.melee} <br />
+          Ranged: {npc.ranged}
         </fieldset>
         <br />
       </div>
       <fieldset>
-      <legend>Background:</legend>
+        <legend>Background:</legend>
         {npc.background}
       </fieldset>
       <br />

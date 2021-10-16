@@ -200,3 +200,25 @@ width: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.armorContainer {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  max-height: 15%;
+  max-width: 15%;
+}
+
+.armorImage {
+  position: relative;
+  text-align: center;
+  max-height: 120px;
+  max-width: 120px;
+}
+
+.armorStat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -209,6 +209,12 @@ width: 50%;
   max-width: 15%;
 }
 
+.bodyContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
 .armorImage {
   position: relative;
   text-align: center;
@@ -217,6 +223,28 @@ width: 50%;
 }
 
 .armorStat {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.healthContainer {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  max-height: 12%;
+  max-width: 15%;
+}
+
+.healthImage {
+  position: relative;
+  text-align: center;
+  max-height: 80px;
+  max-width: 80px;
+}
+
+.healthStat {
   position: absolute;
   top: 45%;
   left: 50%;

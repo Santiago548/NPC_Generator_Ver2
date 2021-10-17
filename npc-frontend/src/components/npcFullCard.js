@@ -33,27 +33,39 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         </fieldset>
         <br />
         {/* ///////////////////////////// */}
+        <div className="bodyTitlesContainer">
+          <div className="healthTitleContainer">
+            <div className="healthTitle">
+              HEALTH:
+            </div>
+          </div>
+          <div className="armorTitleContainer">
+            <div className="armorTitle">
+            ARMOR:
+            {npc.armor.split(" ").slice(0, 1)}
+            <br />
+            ARMOR CLASS:
+            </div>
+          </div>
+        </div>
+
+
+
         <div className="bodyContainer">
-          HEALTH: <br />
           <div className="healthContainer">
             <img className="healthImage" src={Health} alt="healthImage" />
             <div className="healthStat">
               <span>{npc.health + npc.con * 6} HP</span>
             </div>
           </div>
-          <br />
-          ARMOR:
-          <span>
-            {npc.armor.split(" ").slice(0, 1)}
-            <br />
-            ARMOR CLASS: <br />
-            <div className="armorContainer">
-              <img className="armorImage" src={Armor} alt="armorImage" />
-              <div className="armorStat">
+          <div className="armorContainer">
+            <img className="armorImage" src={Armor} alt="armorImage" />
+            <div className="armorStat">
+              <span>
                 {(parseInt(npc.armor.split(" ").slice(1)) + npc.dex)} AC
-              </div>
+              </span>
             </div>
-          </span>
+          </div>
           <br />
         </div>
 
@@ -110,8 +122,8 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
       </fieldset>
       <br />
 
-    </fieldset>
-  </div>
+    </fieldset >
+  </div >
 );
 
 export default NpcFullCard

@@ -201,18 +201,47 @@ width: 50%;
   transform: translate(-50%, -50%);
 }
 
+.bodyContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.bodyTitlesContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.armorTitleContainer {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.armorTitle {
+  position: relative;
+  text-align: center;
+}
+
+.healthTitleContainer {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.healthTitle {
+  position: relative;
+  text-align: center;
+}
+
+
 .armorContainer {
   margin: auto;
   position: relative;
   text-align: center;
   max-height: 12%;
   max-width: 15%;
-}
-
-.bodyContainer {
-  display: flex;
-  margin: auto;
-  justify-content: center;
 }
 
 .armorImage {

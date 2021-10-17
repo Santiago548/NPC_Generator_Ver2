@@ -69,6 +69,30 @@ width: 50%;
   margin-right: 0%;
 }
 
+.deleteButton {
+  font-size: 16px;
+  height: 25%;
+  width: 12%;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: gold;
+  background-color: black;
+  border: solid;
+  border-radius: 20px;
+  box-shadow: 0 10px #999;
+}
+
+.deleteButton:hover {background-color: red}
+
+.deleteButton:active {
+  background-color: gold;
+  color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .statContainer {
   display: flex;
   margin: auto;
@@ -78,15 +102,15 @@ width: 50%;
 .strContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .strImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .strStat {
@@ -99,15 +123,15 @@ width: 50%;
 .dexContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .dexImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .dexStat {
@@ -120,15 +144,15 @@ width: 50%;
 .conContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .conImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .conStat {
@@ -141,15 +165,15 @@ width: 50%;
 .intContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .intImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .intStat {
@@ -162,15 +186,15 @@ width: 50%;
 .wisContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .wisImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .wisStat {
@@ -183,15 +207,15 @@ width: 50%;
 .chaContainer {
   position: relative;
   text-align: center;
-  max-height: 15%;
-  max-width: 15%;
+  max-height: 13%;
+  max-width: 13%;
 }
 
 .chaImage {
   position: relative;
   text-align: center;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 135px;
+  max-width: 135px;
 }
 
 .chaStat {
@@ -205,12 +229,14 @@ width: 50%;
   display: flex;
   margin: auto;
   justify-content: center;
+  width: 50%;
 }
 
 .bodyTitlesContainer {
   display: flex;
   margin: auto;
   justify-content: center;
+  width: 50%;
 }
 
 .armorTitleContainer {
@@ -220,6 +246,17 @@ width: 50%;
 }
 
 .armorTitle {
+  position: relative;
+  text-align: center;
+}
+
+.armorClassTitleContainer {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.armorClassTitle {
   position: relative;
   text-align: center;
 }

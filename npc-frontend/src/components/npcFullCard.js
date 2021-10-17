@@ -11,15 +11,14 @@ import Health from "../assets/images/heart.png"
 const NpcFullCard = ({ npc, deleteNpc }) => (
   <div>
     <fieldset>
-      <button onClick={() => deleteNpc(npc.id)}>
-        <span aria-hidden="true">&times;</span>
+      <button className="deleteButton" onClick={() => deleteNpc(npc.id)}>
+        <span aria-hidden="true">DELETE</span>
       </button>
       <div>
         <div>
           <h3>
             {npc.firstName} {npc.lastName}
           </h3>
-
           The {npc.alignment}
           < br />
           {npc.race} {npc.npcClass} {npc.title}
@@ -33,22 +32,28 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         </fieldset>
         <br />
         {/* ///////////////////////////// */}
-        <div className="bodyTitlesContainer">
-          <div className="healthTitleContainer">
-            <div className="healthTitle">
-              HEALTH:
+        <fieldset>
+          <div className="bodyTitlesContainer">
+            <div className="healthTitleContainer">
+              <div className="healthTitle">
+                HEALTH:
+              </div>
+            </div>
+            <div className="armorClassTitleContainer">
+              <div className="armorClassTitle">
+                ARMOR: <br />
+                {npc.armor.split(" ").slice(0, 1)}
+                <br />
+              </div>
+            </div>
+            <div className="armorTitleContainer">
+              <div className="armorTitle">
+                ARMOR CLASS:
+              </div>
             </div>
           </div>
-          <div className="armorTitleContainer">
-            <div className="armorTitle">
-            ARMOR:
-            {npc.armor.split(" ").slice(0, 1)}
-            <br />
-            ARMOR CLASS:
-            </div>
-          </div>
-        </div>
-
+        </fieldset>
+        <br />
 
 
         <div className="bodyContainer">
@@ -117,7 +122,7 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <br />
       </div>
       <fieldset>
-        <legend>Background:</legend>
+        <legend>BACKGROUND:</legend>
         {npc.background}
       </fieldset>
       <br />

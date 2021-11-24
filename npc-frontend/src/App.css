@@ -342,7 +342,7 @@ width: 50%;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   inline-size: 25%;
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .rightClassDescription {
@@ -350,5 +350,29 @@ width: 50%;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
   inline-size: 25%;
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* race page css */
+
+.raceContainer {
+  display: flex;
+  margin: auto;
+  width: auto;
+}
+
+.leftRaceDescription {
+  float: left;
+  border: 2px solid rgb(0, 0, 0);
+  margin: auto;
+  inline-size: 25%;
+  overflow-wrap: break-word;
+}
+
+.rightRaceDescription {
+  float: right;
+  border: 2px solid rgb(0, 0, 0);
+  margin: auto;
+  inline-size: 25%;
+  overflow-wrap: break-word;
 }

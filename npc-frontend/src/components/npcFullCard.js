@@ -1,15 +1,16 @@
 import React from "react";
-import STR from "../assets/images/strlogo.png"
-import DEX from "../assets/images/dexlogo.png"
-import CON from "../assets/images/conlogo.png"
-import INT from "../assets/images/intlogo.png"
-import WIS from "../assets/images/wislogo.png"
-import CHA from "../assets/images/chalogo.png"
-import Armor from "../assets/images/shield.png"
-import Health from "../assets/images/heart.png"
+import STR from "../assets/images/strlogo.png";
+import DEX from "../assets/images/dexlogo.png";
+import CON from "../assets/images/conlogo.png";
+import INT from "../assets/images/intlogo.png";
+import WIS from "../assets/images/wislogo.png";
+import CHA from "../assets/images/chalogo.png";
+import Armor from "../assets/images/shield.png";
+import Health from "../assets/images/heart.png";
 
 const NpcFullCard = ({ npc, deleteNpc }) => (
-  <div className= "individualFullCard">
+  <div>
+    <div className="individualFullCard">
       <button className="deleteButton" onClick={() => deleteNpc(npc.id)}>
         <span aria-hidden="true">DELETE</span>
       </button>
@@ -19,14 +20,17 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
             {npc.firstName} {npc.lastName}
           </h3>
           The {npc.alignment}
-          < br />
+          <br />
           {npc.race} {npc.npcClass} {npc.title}
         </div>
         <br />
-        <fieldset className='traits'>
-          Traits: {npc.trait}<br />
-          Quirk 1: {npc.quirk1}<br />
-          Quirk 2:{npc.quirk2}<br />
+        <fieldset className="traits">
+          Traits: {npc.trait}
+          <br />
+          Quirk 1: {npc.quirk1}
+          <br />
+          Quirk 2:{npc.quirk2}
+          <br />
           Physical Trait: {npc.notablePhysicalFeature}
         </fieldset>
         <br />
@@ -34,9 +38,7 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <fieldset>
           <div className="bodyTitlesContainer">
             <div className="healthTitleContainer">
-              <div className="healthTitle">
-                HEALTH:
-              </div>
+              <div className="healthTitle">HEALTH:</div>
             </div>
             <div className="armorClassTitleContainer">
               <div className="armorClassTitle">
@@ -46,14 +48,11 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
               </div>
             </div>
             <div className="armorTitleContainer">
-              <div className="armorTitle">
-                ARMOR CLASS:
-              </div>
+              <div className="armorTitle">ARMOR CLASS:</div>
             </div>
           </div>
         </fieldset>
         <br />
-
 
         <div className="bodyContainer">
           <div className="healthContainer">
@@ -66,7 +65,7 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
             <img className="armorImage" src={Armor} alt="armorImage" />
             <div className="armorStat">
               <span>
-                {(parseInt(npc.armor.split(" ").slice(1)) + npc.dex)} AC
+                {parseInt(npc.armor.split(" ").slice(1)) + npc.dex} AC
               </span>
             </div>
           </div>
@@ -78,37 +77,37 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
           <div className="strContainer">
             <img className="strImage" src={STR} alt="strContainer" />
             <div className="strStat">
-              +{npc.str} /  {(10 + npc.str * 2)}
+              +{npc.str} / {10 + npc.str * 2}
             </div>
           </div>
           <div className="dexContainer">
             <img className="dexImage" src={DEX} alt="dexContainer" />
             <div className="dexStat">
-              +{npc.dex} /  {(10 + npc.dex * 2)}
+              +{npc.dex} / {10 + npc.dex * 2}
             </div>
           </div>
           <div className="conContainer">
             <img className="conImage" src={CON} alt="conContainer" />
             <div className="conStat">
-              +{npc.con} /  {(10 + npc.con * 2)}
+              +{npc.con} / {10 + npc.con * 2}
             </div>
           </div>
           <div className="intContainer">
             <img className="intImage" src={INT} alt="intContainer" />
             <div className="intStat">
-              +{npc.int} /  {(10 + npc.int * 2)}
+              +{npc.int} / {10 + npc.int * 2}
             </div>
           </div>
           <div className="wisContainer">
             <img className="wisImage" src={WIS} alt="wisContainer" />
             <div className="wisStat">
-              +{npc.wis} /  {(10 + npc.wis * 2)}
+              +{npc.wis} / {10 + npc.wis * 2}
             </div>
           </div>
           <div className="chaContainer">
             <img className="chaImage" src={CHA} alt="chaContainer" />
             <div className="chaStat">
-              +{npc.cha} /  {(10 + npc.cha * 2)}
+              +{npc.cha} / {10 + npc.cha * 2}
             </div>
           </div>
         </div>
@@ -124,9 +123,9 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <legend>BACKGROUND:</legend>
         {npc.background}
       </fieldset>
-    
-      <br />
-  </div >
+    </div>
+    <br />
+  </div>
 );
 
-export default NpcFullCard
+export default NpcFullCard;

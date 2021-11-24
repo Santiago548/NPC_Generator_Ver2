@@ -341,10 +341,14 @@ width: 50%;
   float: left;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
+  inline-size: 25%;
+    overflow-wrap: break-word;
 }
 
 .rightClassDescription {
   float: right;
   border: 2px solid rgb(0, 0, 0);
   margin: auto;
+  inline-size: 25%;
+    overflow-wrap: break-word;
 }

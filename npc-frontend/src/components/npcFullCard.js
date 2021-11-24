@@ -60,7 +60,7 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
           <div className="healthContainer">
             <img className="healthImage" src={Health} alt="healthImage" />
             <div className="healthStat">
-              <span>{npc.health + npc.con * 6} HP</span>
+              <span className="healthStat">{npc.health + npc.con * 6} HP</span>
             </div>
           </div>
           <div className="armorContainer">

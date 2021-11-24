@@ -5,7 +5,6 @@ import { deleteNpc, getNpcFullCard } from "../actions/npcs";
 import NpcFullCard from "../components/npcFullCard";
 
 class NpcHome extends Component {
- 
   render() {
     const { npcs, deleteNpc, getNpcFullCard } = this.props;
     // const npc = npcs.filter((npc) => npc.id === this.props.id);
@@ -19,10 +18,15 @@ class NpcHome extends Component {
             <NpcPreviewCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
           ))}
         </div> */}
-        <div className="npc-full-card">
-          <h2 className="app-title">| Npc |</h2>
+        <h2 className="app-title">| Npc |</h2>
+        <div className="npcCardsContainer">
           {npcs.map((npc) => (
-            <NpcFullCard key={npc.id} deleteNpc={deleteNpc} npc={npc} getNpcFullCard={getNpcFullCard}/>
+            <NpcFullCard
+              key={npc.id}
+              deleteNpc={deleteNpc}
+              npc={npc}
+              getNpcFullCard={getNpcFullCard}
+            />
           ))}
         </div>
       </div>

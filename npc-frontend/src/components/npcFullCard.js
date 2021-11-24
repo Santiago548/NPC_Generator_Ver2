@@ -9,8 +9,7 @@ import Armor from "../assets/images/shield.png"
 import Health from "../assets/images/heart.png"
 
 const NpcFullCard = ({ npc, deleteNpc }) => (
-  <div>
-    <fieldset>
+  <div className= "individualFullCard">
       <button className="deleteButton" onClick={() => deleteNpc(npc.id)}>
         <span aria-hidden="true">DELETE</span>
       </button>
@@ -125,9 +124,8 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
         <legend>BACKGROUND:</legend>
         {npc.background}
       </fieldset>
+    
       <br />
-
-    </fieldset >
   </div >
 );
 

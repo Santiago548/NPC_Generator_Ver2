@@ -32,9 +32,13 @@ float: left;
 width: 50%;
 } */
 
-.npc-full-card {
-  width: 60%;
+.npcCardsContainer {
+  width: 65%;
   margin: auto;
+}
+
+.individualFullCard {
+  padding: 4px;
   color: rgb(0, 0, 0);
   background-color: rgb(231, 225, 171);
   border: solid;

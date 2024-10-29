@@ -156,6 +156,7 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
+    wdm (0.2.0)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -174,6 +175,7 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   tzinfo-data
+  wdm (>= 0.1.0)
 
 RUBY VERSION
    ruby 3.2.2p53

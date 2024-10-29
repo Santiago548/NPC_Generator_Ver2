@@ -5,8 +5,8 @@ export const NpcRaces = () => {
     <div>
       <h1>Races</h1>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Dragonborn</h2>
           <hr />
           <p>
@@ -15,7 +15,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+        
+        <fieldset className="raceContainer">
           <h2>Dwarf</h2>
           <hr />
           <p>
@@ -24,10 +25,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Elf</h2>
           <hr />
           <p>
@@ -36,7 +37,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Gnome</h2>
           <hr />
           <p>
@@ -45,10 +47,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Half-Elf</h2>
           <hr />
           <p>
@@ -57,7 +59,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Halfling</h2>
           <hr />
           <p>
@@ -66,10 +69,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Human</h2>
           <hr />
           <p>
@@ -79,7 +82,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Half-Orc</h2>
           <hr />
           <p>
@@ -89,10 +93,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Tiefling</h2>
           <hr />
           <p>
@@ -102,7 +106,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Goliath</h2>
           <hr />
           <p>
@@ -110,10 +115,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Firbolg</h2>
           <hr />
           <p>
@@ -122,7 +127,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Goblin</h2>
           <hr />
           <p>
@@ -131,10 +137,10 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
+      </div>
 
-      <fieldset className="raceContainer">
-        <fieldset className="leftRaceDescription">
+      <div className="racesRow">
+        <fieldset className="raceContainer">
           <h2>Orc</h2>
           <hr />
           <p>
@@ -143,7 +149,8 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-        <fieldset className="rightRaceDescription">
+
+        <fieldset className="raceContainer">
           <h2>Tabaxi</h2>
           <hr />
           <p>
@@ -154,8 +161,9 @@ export const NpcRaces = () => {
           </p>
           <strong>Racial Traits</strong>
         </fieldset>
-      </fieldset>
-      <fieldset>
+      </div>
+
+      <fieldset className="raceContainer">
         <h2>Warforged</h2>
         <hr />
         <p>

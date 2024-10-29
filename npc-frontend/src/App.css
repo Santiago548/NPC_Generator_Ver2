@@ -1,378 +1,223 @@
+/* General Styles */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-family: 'Arial', sans-serif; /* Use a modern font */
+  background-color: #f0f0f0; /* Light background for contrast */
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2c3e50; /* Darker header */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #ecf0f1; /* Lighter text color */
+}
+
+/* NPC Card */
+.npc-card {
+  width: 80%; /* Responsive width */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ecf0f1; /* Light background for cards */
+  border: 1px solid #bdc3c7; /* Soft border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+}
+
+.npc-card:hover {
+  transform: scale(1.02); /* Slightly grow the card on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Delete Button */
+.delete-button {
+  font-size: 1rem; /* Responsive font size */
+  padding: 5px 10px;
+  background-color: #e74c3c; /* Red background for delete */
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.npc-container {
-  width: auto;
-  margin: auto;
-}
-
-/* .npc-list {
-float: left;
-width: 50%;
-} */
-
-.npcCardsContainer {
-  width: 65%;
-  margin: auto;
-}
-
-.individualFullCard {
-  padding: 4px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(231, 225, 171);
-  border: solid;
-  border-radius: 20px;
-  box-shadow: 0 10px #999;
-}
-
-#randomButton {
-  font-size: 16px;
-  height: 25%;
-  width: 25%;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: gold;
-  background-color: black;
-  border: solid;
-  border-radius: 20px;
-  box-shadow: 0 10px #999;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s;
 }
 
-#randomButton:hover {
-  background-color: red;
+.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
 }
 
-#randomButton:active {
-  background-color: gold;
-  color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+/* NPC Details */
+.npc-details {
+  margin-top: 60px; /* Space for the delete button */
+}
+
+.npc-name {
+  font-size: 1.5rem; /* Larger name */
+  color: #2980b9; /* Blue color for name */
+}
+
+.npc-info {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #34495e; /* Dark gray for info */
+}
+
+/* Traits Fieldset */
+.traits {
+  border: 1px solid #bdc3c7; /* Light border */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff; /* White background for contrast */
+}
+
+/* Armor and Health Containers */
+.armor-health-container {
+  display: flex;
+  justify-content: space-around; /* Space out health and armor */
+  margin: 20px 0;
+}
+
+.health-container,
+.armor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.health-image,
+.armor-image {
+  width: 50px; /* Fixed size for icons */
+  height: 50px; /* Fixed size for icons */
+}
+
+.health-stat,
+.armor-stat {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60; /* Green for health */
+}
+
+/* Stat Container */
+.stat-container {
+  display: flex;
+  justify-content: space-around; /* Space out stat items */
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+/* Individual Stat Items */
+.stat-container-item {
+  position: relative; /* Position relative to center text */
+  text-align: center; /* Center text */
+  flex: 1; /* Flex items grow evenly */
+  margin: 10px; /* Space around each item */
+  max-width: 120px; /* Limit max width to avoid overflow */
+  flex-basis: 30%; /* Three items per row */
+}
+
+.stat-container-item img {
+  width: 100%; /* Use full width for responsive sizing */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 120px; /* Limit max size */
+}
+
+.stat-container-item span {
+  position: absolute; /* Position absolute to center text */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  font-size: 1rem; /* Size for stat values */
+  white-space: nowrap; /* Prevent text from wrapping */
+  color: #000000; /* Change text color for better visibility (if needed) */
+}
+
+/* Weapons Fieldset */
+.weapons {
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Background Fieldset */
+.background {
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Random Button */
+#randomButton {
+  padding: 8px; /* Smaller padding for size reduction */
+  background-color: #c0392b; /* Darker red to match the d20 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Smooth transitions */
+  margin: 20px auto; /* Centers horizontally */
+  display: block; /* Centers the button */
+  width: 100px; /* Fixed width for consistency */
 }
 
 #randomButtonImage {
-  text-align: center;
-  height: 25%;
-  width: 25%;
-  margin-left: 0%;
-  margin-right: 0%;
+  width: 80%; /* Adjust the image size to fit the button */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image in the button */
+  margin: 0 auto; /* Centering the image */
 }
 
-.deleteButton {
-  font-size: 16px;
-  height: 25%;
-  width: 15%;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: gold;
-  background-color: black;
-  border: solid;
-  border-radius: 20px;
-  box-shadow: 0 10px #999;
+#randomButton:hover {
+  background-color: #e74c3c; /* Slightly lighter red on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
-.deleteButton:hover {
-  background-color: red;
+#randomButton:active {
+  background-color: #a93226; /* Darker red on press */
+  transform: translateY(2px); /* Button press effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on press */
 }
 
-.deleteButton:active {
-  background-color: gold;
-  color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .npc-card {
+    width: 95%; /* More width on smaller screens */
+  }
+
+  .delete-button {
+    font-size: 0.9rem; /* Adjust size for smaller screens */
+  }
+
+  .stat-container-item {
+    flex: 1 1 45%; /* Two items per row on smaller screens */
+    margin: 5px 0; /* Adjust margins */
+  }
+
+  .stat-container-item img {
+    width: 80%; /* Resize images on smaller screens */
+    max-width: 80px; /* Limit max size */
+  }
 }
 
-.statContainer {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
+@media (max-width: 480px) {
+  .stat-container-item {
+    flex: 1 1 100%; /* Full width for mobile */
+  }
 
-.strContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
+  .stat-container-item img {
+    width: 90%; /* Smaller images on mobile */
+    max-width: 60px; /* Limit max size */
+  }
 
-.strImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.strStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.dexContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
-
-.dexImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.dexStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.conContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
-
-.conImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.conStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.intContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
-
-.intImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.intStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.wisContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
-
-.wisImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.wisStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.chaContainer {
-  position: relative;
-  text-align: center;
-  max-height: 13%;
-  max-width: 13%;
-}
-
-.chaImage {
-  position: relative;
-  text-align: center;
-  max-height: 135px;
-  max-width: 135px;
-}
-
-.chaStat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.bodyContainer {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  width: 50%;
-}
-
-.bodyTitlesContainer {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  width: 50%;
-}
-
-.armorTitleContainer {
-  margin: auto;
-  position: relative;
-  text-align: center;
-}
-
-.armorTitle {
-  position: relative;
-  text-align: center;
-}
-
-.armorClassTitleContainer {
-  margin: auto;
-  position: relative;
-  text-align: center;
-}
-
-.armorClassTitle {
-  position: relative;
-  text-align: center;
-}
-
-.healthTitleContainer {
-  margin: auto;
-  position: relative;
-  text-align: center;
-}
-
-.healthTitle {
-  position: relative;
-  text-align: center;
-}
-
-.armorContainer {
-  margin: auto;
-  position: relative;
-  text-align: center;
-  max-height: 12%;
-  max-width: 15%;
-}
-
-.armorImage {
-  position: relative;
-  text-align: center;
-  max-height: 80px;
-  max-width: 80px;
-}
-
-.armorStat {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.healthContainer {
-  margin: auto;
-  position: relative;
-  text-align: center;
-  max-height: 12%;
-  max-width: 15%;
-}
-
-.healthImage {
-  position: relative;
-  text-align: center;
-  max-height: 80px;
-  max-width: 80px;
-}
-
-.healthStat {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* classes page css */
-
-.classesContainer {
-  display: flex;
-  margin: auto;
-  width: auto;
-}
-
-.leftClassDescription {
-  float: left;
-  border: 2px solid rgb(0, 0, 0);
-  margin: auto;
-  inline-size: 25%;
-  overflow-wrap: break-word;
-}
-
-.rightClassDescription {
-  float: right;
-  border: 2px solid rgb(0, 0, 0);
-  margin: auto;
-  inline-size: 25%;
-  overflow-wrap: break-word;
-}
-
-/* race page css */
-
-.raceContainer {
-  display: flex;
-  margin: auto;
-  width: auto;
-}
-
-.leftRaceDescription {
-  float: left;
-  border: 2px solid rgb(0, 0, 0);
-  margin: auto;
-  inline-size: 25%;
-  overflow-wrap: break-word;
-}
-
-.rightRaceDescription {
-  float: right;
-  border: 2px solid rgb(0, 0, 0);
-  margin: auto;
-  inline-size: 25%;
-  overflow-wrap: break-word;
+  .stat-container-item span {
+    font-size: 0.9rem; /* Slightly smaller text for smaller screens */
+  }
 }

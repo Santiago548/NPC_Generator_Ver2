@@ -1,0 +1,70 @@
+{
+  "meleeWeapons": [
+    {
+      "name": "Battle Axe",
+      "damage": "1d8",
+      "type": "Slashing",
+      "description": "Battle Axe"
+    },
+    {
+      "name": "Club",
+      "damage": "1d4",
+      "type": "Bludgeoning",
+      "description": "Club"
+    },
+    {
+      "name": "Dagger",
+      "damage": "1d4",
+      "type": "Piercing",
+      "description": "Dagger"
+    },
+    {
+      "name": "Greataxe",
+      "damage": "1d12",
+      "type": "Slashing",
+      "description": "Greataxe"
+    },
+    {
+      "name": "Great Club",
+      "damage": "1d8",
+      "type": "Bludgeoning",
+      "description": "Great Club"
+    },
+    {
+      "name": "Hand Axe",
+      "damage": "1d6",
+      "type": "Slashing",
+      "description": "Hand Axe"
+    },
+    {
+      "name": "Long Sword",
+      "damage": "1d8",
+      "type": "Slashing",
+      "description": "Long Sword"
+    },
+    {
+      "name": "Quarterstaff",
+      "damage": "1d6",
+      "type": "Bludgeoning",
+      "description": "Quarterstaff"
+    },
+    {
+      "name": "Rapier",
+      "damage": "1d8",
+      "type": "Piercing",
+      "description": "Rapier"
+    },
+    {
+      "name": "Scimitar",
+      "damage": "1d6",
+      "type": "Slashing",
+      "description": "Scimitar"
+    },
+    {
+      "name": "Short Sword",
+      "damage": "1d6",
+      "type": "Slashing",
+      "description": "Short Sword"
+    }
+  ]
+}

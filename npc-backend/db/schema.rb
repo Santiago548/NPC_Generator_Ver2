@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_163753) do
-
+ActiveRecord::Schema[7.1].define(version: 2021_07_28_163753) do
   create_table "npcs", force: :cascade do |t|
     t.string "firstName"
     t.string "lastName"
@@ -35,8 +34,8 @@ ActiveRecord::Schema.define(version: 2021_07_28_163753) do
     t.string "quirk1"
     t.string "quirk2"
     t.string "notablePhysicalFeature"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

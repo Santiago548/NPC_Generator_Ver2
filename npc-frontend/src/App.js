@@ -8,7 +8,7 @@ import { About } from "./components/about"
 import { NpcClasses } from "./components/NpcClasses"
 import { NpcRaces } from "./components/NpcRaces"
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 class App extends Component {
   componentDidMount() {
@@ -33,12 +33,12 @@ class App extends Component {
         <Navigation />
         <div className="App">
           <h1>NPC GENERATOR Ver2</h1>
-          <Switch>
-            <Route exact path="/" component={NpcContainer} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/classes" component={NpcClasses} />
-            <Route exact path="/races" component={NpcRaces} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<NpcContainer />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/classes" element={<NpcClasses />} />
+            <Route path="/races" element={<NpcRaces />} />
+          </Routes>
           <hr />
          
         </div>

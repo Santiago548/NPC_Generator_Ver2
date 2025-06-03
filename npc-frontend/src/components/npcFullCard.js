@@ -36,13 +36,19 @@ const NpcFullCard = ({ npc, deleteNpc }) => (
       </fieldset>
 
       <div className="armor-health-container">
-        <div className="health-container">
-          <img className="health-image" src={Health} alt="Health" />
-          <span className="health-stat">{npc.health + npc.con * 6} HP</span>
+        <div className="icon-stat-container">
+          <img src={Health} alt="Health" />
+          <span className="icon-stat-value">
+            <span className="icon-stat-number">{npc.health + npc.con * 6}</span>
+            <span className="icon-stat-label">HP</span>
+          </span>
         </div>
-        <div className="armor-container">
-          <img className="armor-image" src={Armor} alt="Armor" />
-          <span className="armor-stat">{parseInt(npc.armor.split(" ").slice(1)) + npc.dex} AC</span>
+        <div className="icon-stat-container">
+          <img src={Armor} alt="Armor" />
+          <span className="icon-stat-value">
+            <span className="icon-stat-number">{parseInt(npc.armor.split(" ").slice(1)) + npc.dex}</span>
+            <span className="icon-stat-label">AC</span>
+          </span>
         </div>
       </div>
 

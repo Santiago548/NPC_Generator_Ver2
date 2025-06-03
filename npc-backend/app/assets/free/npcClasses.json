@@ -1,0 +1,56 @@
+{
+  "npcClasses": [
+    {
+      "name": "Barbarian",
+      "description": "Barbarian"
+    },
+    {
+      "name": "Bard",
+      "description": "Bard"
+    },
+    {
+      "name": "Cleric",
+      "description": "Cleric"
+    },
+    {
+      "name": "Druid",
+      "description": "Druid"
+    },
+    {
+      "name": "Fighter",
+      "description": "Fighter"
+    },
+    {
+      "name": "Monk",
+      "description": "Monk"
+    },
+    {
+      "name": "Paladin",
+      "description": "Paladin"
+    },
+    {
+      "name": "Ranger",
+      "description": "Ranger"
+    },
+    {
+      "name": "Rogue",
+      "description": "Rogue"
+    },
+    {
+      "name": "Sorcerer",
+      "description": "Sorcerer"
+    },
+    {
+      "name": "Warlock",
+      "description": "Warlock"
+    },
+    {
+      "name": "Wizard",
+      "description": "Wizard"
+    },
+    {
+      "name": "Artificer",
+      "description": "Artificer"
+    }
+  ]
+}

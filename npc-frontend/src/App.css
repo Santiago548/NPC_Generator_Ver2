@@ -138,6 +138,50 @@
   color: #000000; /* Change text color for better visibility (if needed) */
 }
 
+/* Center stat value inside icon */
+.icon-stat-container {
+  position: relative;
+  display: inline-block;
+  width: 70px;   /* or whatever size fits your design */
+  height: 70px;
+  margin: 0 20px;
+}
+
+.icon-stat-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.icon-stat-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.icon-stat-number {
+  font-size: 1.3rem; /* Adjust as needed */
+  font-weight: bold;
+  color: #27ae60; /* or #2980b9 for AC, or whatever you want */
+  text-shadow: 0 1px 3px #fff, 0 1px 3px #000;
+  line-height: 1;
+}
+
+.icon-stat-label {
+  font-size: 0.9rem; /* Smaller than the number */
+  font-weight: bold;
+  color: #27ae60; /* Match number color or use a different one */
+  text-shadow: 0 1px 3px #fff, 0 1px 3px #000;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
 /* Weapons Fieldset */
 .weapons {
   border: 1px solid #bdc3c7;

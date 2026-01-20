@@ -119,9 +119,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 S
 <!-- CONTACT -->
 ## Contact
-
 Your Name - Dominic Barajas
-Twitter - [@TechDom2](https://twitter.com/TechDom2) 
 Email - dominicbarajas548@gmail.com 
-
-Project Link: [https://github.com/Santiago548/repo_name](https://github.com/Santiago548/repo_name)

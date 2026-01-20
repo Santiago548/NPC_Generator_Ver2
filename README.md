@@ -120,4 +120,5 @@ S
 <!-- CONTACT -->
 ## Contact
 Your Name - Dominic Barajas
+<br />
 Email - dominicbarajas548@gmail.com 

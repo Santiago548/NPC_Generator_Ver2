@@ -1,0 +1,376 @@
+{
+    "traits": [
+        {
+        "name": "Brave",
+        "description": "Faces danger head-on without fear."
+        },
+        {
+        "name": "Cautious",
+        "description": "Takes careful steps to avoid risks."
+        },
+        {
+        "name": "Curious",
+        "description": "Eager to learn and explore new things."
+        },
+        {
+        "name": "Generous",
+        "description": "Willing to give and share with others."
+        },
+        {
+        "name": "Honest",
+        "description": "Always tells the truth and is trustworthy."
+        },
+        {
+        "name": "Loyal",
+        "description": "Faithful to friends and allies."
+        },
+        {
+        "name": "Optimistic",
+        "description": "Looks on the bright side of situations."
+        },
+        {
+        "name": "Pessimistic",
+        "description": "Expects the worst in situations."
+        },
+        {
+        "name": "Resourceful",
+        "description": "Able to find quick and clever ways to overcome difficulties."
+        },
+        {
+        "name": "Skeptical",
+        "description": "Doubts accepted beliefs and questions everything."
+        },
+        {
+        "name": "Compassionate",
+        "description": "Shows sympathy and concern for others."
+        },
+        {
+        "name": "Leader",
+        "description": "Naturally takes charge and guides others."
+        },
+        {
+        "name": "Courageous",
+        "description": "Demonstrates bravery in the face of adversity."
+        },
+        {
+        "name": "Unselfish",
+        "description": "Puts others' needs before their own."
+        },
+        {
+        "name": "Hard-working",
+        "description": "Puts in great effort and diligence."
+        },
+        {
+        "name": "Independent",
+        "description": "Relies on oneself and acts autonomously."
+        },
+        {
+        "name": "Selfish",
+        "description": "Primarily concerned with personal gain."
+        },
+        {
+        "name": "Responsible",
+        "description": "Dependable and accountable for actions."
+        },
+        {
+        "name": "Considerate",
+        "description": "Thinks about the feelings and needs of others."
+        },
+        {
+        "name": "Self-confident",
+        "description": "Trusts in their own abilities and judgment."
+        },
+        {
+        "name": "Humble",
+        "description": "Has a modest view of their own importance."
+        },
+        {
+        "name": "Poor",
+        "description": "Lacks material wealth."
+        },
+        {
+        "name": "Rich",
+        "description": "Possesses great material wealth."
+        },
+        {
+        "name": "Strong",
+        "description": "Physically or mentally powerful."
+        },
+        {
+        "name": "Tall",
+        "description": "Above average in height."
+        },
+        {
+        "name": "Dark",
+        "description": "Has a somber or mysterious demeanor."
+        },
+        {
+        "name": "Light",
+        "description": "Has a cheerful or radiant demeanor."
+        },
+        {
+        "name": "Handsome",
+        "description": "Attractive in appearance."
+        },
+        {
+        "name": "Pretty",
+        "description": "Pleasant to look at."
+        },
+        {
+        "name": "Ugly",
+        "description": "Unattractive in appearance."
+        },
+        {
+        "name": "Messy",
+        "description": "Disorganized or untidy."
+        },
+        {
+        "name": "Gentle",
+        "description": "Kind and mild in temperament."
+        },
+        {
+        "name": "Wild",
+        "description": "Unrestrained and free-spirited."
+        },
+        {
+        "name": "Joyful",
+        "description": "Full of happiness and delight."
+        },
+        {
+        "name": "Busy",
+        "description": "Always occupied or engaged."
+        },
+        {
+        "name": "Patriotic",
+        "description": "Loves and supports their country."
+        },
+        {
+        "name": "Neat",
+        "description": "Orderly and tidy."
+        },
+        {
+        "name": "Popular",
+        "description": "Well-liked by many people."
+        },
+        {
+        "name": "Successful",
+        "description": "Achieves goals and attains success."
+        },
+        {
+        "name": "Short",
+        "description": "Below average in height."
+        },
+        {
+        "name": "Prim",
+        "description": "Very formal and proper."
+        },
+        {
+        "name": "Proper",
+        "description": "Behaves in a socially acceptable way."
+        },
+        {
+        "name": "Dainty",
+        "description": "Delicate and graceful."
+        },
+        {
+        "name": "Able",
+        "description": "Capable and competent."
+        },
+        {
+        "name": "Fighter",
+        "description": "Ready to face challenges and conflicts."
+        },
+        {
+        "name": "Tireless",
+        "description": "Never seems to get tired."
+        },
+        {
+        "name": "Plain",
+        "description": "Simple and unadorned."
+        },
+        {
+        "name": "Expert",
+        "description": "Highly skilled in a particular area."
+        },
+        {
+        "name": "Imaginative",
+        "description": "Has a creative and inventive mind."
+        },
+        {
+        "name": "Conceited",
+        "description": "Has an excessively high opinion of themselves."
+        },
+        {
+        "name": "Mischievous",
+        "description": "Likes to cause playful trouble."
+        },
+        {
+        "name": "Demanding",
+        "description": "Requires much from others."
+        },
+        {
+        "name": "Thoughtful",
+        "description": "Considers things carefully."
+        },
+        {
+        "name": "Keen",
+        "description": "Sharp and perceptive."
+        },
+        {
+        "name": "Happy",
+        "description": "Feels or shows pleasure and contentment."
+        },
+        {
+        "name": "Disagreeable",
+        "description": "Difficult to get along with."
+        },
+        {
+        "name": "Simple",
+        "description": "Uncomplicated and easy to understand."
+        },
+        {
+        "name": "Fancy",
+        "description": "Elaborate or decorative."
+        },
+        {
+        "name": "Excited",
+        "description": "Eager and enthusiastic."
+        },
+        {
+        "name": "Studious",
+        "description": "Spends a lot of time studying or reading."
+        },
+        {
+        "name": "Inventive",
+        "description": "Good at creating new things."
+        },
+        {
+        "name": "Creative",
+        "description": "Uses imagination to create new ideas."
+        },
+        {
+        "name": "Thrilling",
+        "description": "Causes excitement and suspense."
+        },
+        {
+        "name": "Intelligent",
+        "description": "Very smart and quick to understand."
+        },
+        {
+        "name": "Proud",
+        "description": "Feels deep pleasure or satisfaction in achievements."
+        },
+        {
+        "name": "Fun-loving",
+        "description": "Enjoys having fun."
+        },
+        {
+        "name": "Daring",
+        "description": "Willing to take risks."
+        },
+        {
+        "name": "Bright",
+        "description": "Intelligent and quick-witted."
+        },
+        {
+        "name": "Serious",
+        "description": "Earnest and thoughtful."
+        },
+        {
+        "name": "Funny",
+        "description": "Able to make others laugh."
+        },
+        {
+        "name": "Humorous",
+        "description": "Has a good sense of humor."
+        },
+        {
+        "name": "Sad",
+        "description": "Feels or shows sorrow."
+        },
+        {
+        "name": "Lazy",
+        "description": "Unwilling to work or use energy."
+        },
+        {
+        "name": "Dreamer",
+        "description": "Has many ideas and dreams."
+        },
+        {
+        "name": "Helpful",
+        "description": "Willing to help others."
+        },
+        {
+        "name": "Simple-minded",
+        "description": "Lacks complexity in thought."
+        },
+        {
+        "name": "Friendly",
+        "description": "Kind and pleasant to others."
+        },
+        {
+        "name": "Adventurous",
+        "description": "Willing to take risks and try new things."
+        },
+        {
+        "name": "Timid",
+        "description": "Lacks courage or confidence."
+        },
+        {
+        "name": "Shy",
+        "description": "Nervous or timid in the company of others."
+        },
+        {
+        "name": "Pitiful",
+        "description": "Deserving or arousing pity."
+        },
+        {
+        "name": "Cooperative",
+        "description": "Works well with others."
+        },
+        {
+        "name": "Lovable",
+        "description": "Easily loved or very endearing."
+        },
+        {
+        "name": "Ambitious",
+        "description": "Has a strong desire for success."
+        },
+        {
+        "name": "Quiet",
+        "description": "Makes little or no noise."
+        },
+        {
+        "name": "Reserved",
+        "description": "Slow to reveal emotions or opinions."
+        },
+        {
+        "name": "Pleasing",
+        "description": "Gives pleasure or satisfaction."
+        },
+        {
+        "name": "Bossy",
+        "description": "Likes to give orders to others."
+        },
+        {
+        "name": "Witty",
+        "description": "Shows quick and inventive verbal humor."
+        },
+        {
+        "name": "Energetic",
+        "description": "Full of energy and enthusiasm."
+        },
+        {
+        "name": "Cheerful",
+        "description": "Noticeably happy and optimistic."
+        },
+        {
+        "name": "Smart",
+        "description": "Very intelligent or clever."
+        },
+        {
+        "name": "Impulsive",
+        "description": "Acts without thinking."
+        }
+    ]
+}
